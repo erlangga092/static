@@ -15,16 +15,36 @@
 				</ul>
 			</section>
 			<section class="header__navbar__search">
-				<button class="mr-4 bg-green-500 hover:bg-green-400">
-					en-US
-				</button>
-				<button class="bg-red-500 hover:bg-red-400">
-					id-ID
-				</button>				
+				<nuxt-link 
+					v-for="locale in availableLocales"
+					:key="locale.id"
+					:aria-label="locale.name"
+					:to="switchLocalePath(locale.code)"					
+					class="translation hover:bg-green-400"
+				>
+					{{ locale.iso }}
+				</nuxt-link>				
 			</section>
 		</div>
 	</header>
 </template>
+
+<script>
+export default {
+	data() {
+		return {
+			availableLocales: []
+		}
+	},
+	created() {
+		const locale = this.$i18n.locale;
+		const locales = this.$i18n.locales;
+		const defaultLocale = this.$i18n.defaultLocale;
+		const availableLocales = locales.filter(i => i.code !== locale);
+		this.availableLocales = availableLocales;
+	}
+}
+</script>
 
 <style lang="postcss">
 .header {
@@ -45,11 +65,7 @@
 		}
 
 		&__search {
-			@apply flex items-center justify-end w-full;
-
-			> button {
-				@apply px-4 py-1 rounded text-white text-lg;
-			}
+			@apply flex items-center justify-end w-full;				
 		}
 
 		&__menu {
@@ -64,5 +80,9 @@
 			}
 		}
 	}
+}
+
+.translation {
+	@apply px-4 py-1 rounded text-white text-lg mr-4 bg-green-500;
 }
 </style>
