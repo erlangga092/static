@@ -71,6 +71,9 @@ export default {
 
 .article {
 	@apply mt-4 py-4 grid grid-cols-2 gap-8;
+	@media screen and (max-width: 976px) {
+		grid-template-columns: 1fr;
+	}
 
 	> &__card {
 		@apply col-span-1 rounded shadow overflow-hidden;

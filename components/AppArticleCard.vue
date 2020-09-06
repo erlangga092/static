@@ -5,7 +5,13 @@
 		</section>
 		<section class="meta px-8">
 			<div class="meta__title">
-				<h1 class="my-4 text-xl">{{ title }}</h1>
+				<h1 class="my-4 text-xl">
+				<nuxt-link 
+					:to="localePath({ name: 'blog-slug', params: { slug } })"
+				>
+					{{ title }}
+				</nuxt-link>
+				</h1>
 			</div>
 			<div class="meta__summary">
 				<p class="my-4">{{ summary }}</p>

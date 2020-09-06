@@ -4,7 +4,7 @@
 			<section class="header__navbar__logo">
 				<h1 class="my-0 text-2xl">ERL_Angga</h1>
 			</section>
-			<section class="header__navbar__menu">
+			<aside class="header__navbar__menu">
 				<ul class="flex items-center justify-between px-8 mx-0 my-0 list-none">
 					<li class="mx-0 my-0 mr-4">
 						<nuxt-link to="/">Home</nuxt-link>
@@ -13,7 +13,7 @@
 						<nuxt-link to="/blog">Blog</nuxt-link>
 					</li>
 				</ul>
-			</section>
+			</aside>
 			<section class="header__navbar__search">
 				<nuxt-link 
 					v-for="locale in availableLocales"
@@ -55,6 +55,9 @@ export default {
 	&__navbar {
 		@apply w-full h-24 grid grid-cols-3 px-8 py-2 items-center shadow-sm;
 		background-color: var(--bg-card);
+		@media screen and (max-width: 768px) {
+			grid-template-columns: 1fr 1fr;
+		}
 
 		&__logo {
 			@apply flex col-span-1 items-center;
@@ -70,6 +73,10 @@ export default {
 
 		&__menu {
 			@apply flex items-center justify-center;
+			@media screen and (max-width: 768px) {
+				display: none;
+			}
+
 			> ul > li {
 				@apply p-2;
 			}

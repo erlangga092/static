@@ -46,6 +46,15 @@ body {
   }
 }
 
+a {
+  @apply underline;
+  color: var(--text-link);
+
+  &:hover {
+    @apply no-underline;
+  }
+}
+
 h1, h2, h3, h4, h5, h6 {
 	@apply leading-loose mt-12 mb-5 font-semibold;
 	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -110,15 +119,31 @@ pre {
 
 strong,
 b {
-	font-weight: 700;
+  font-weight: 700
 }
 
 ul {
-	@apply list-disc;
+  @apply list-disc;
 }
 
 ol {
-	@apply list-decimal;
+  @apply list-decimal;
+}
+
+ul, ol {
+  @apply ml-4;
+
+  li {
+    @apply mb-3;
+
+    ul, ol {
+      @apply my-3 ml-4;
+    }
+  }
+}
+
+ol {
+  @apply list-inside;
 }
 
 blockquote,

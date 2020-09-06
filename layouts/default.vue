@@ -56,3 +56,11 @@ export default {
 	}
 }
 </script>
+
+<style lang="postcss">
+.wrapper {
+	@media screen and (max-width: 976px) {
+		width: 95%;
+	}
+}
+</style>
