@@ -19,26 +19,12 @@ export default {
       property: 'og:image:alt',
       content: 'Erlangga'
     },
-    { property: 'fb:admins', content: 100003000286186 },
-    {
-      property: 'fb:app_id',
-      content: 267913173658573
-    },
-    { property: 'fb:pages', content: 632770976865033 },
     {
       name: 'google-site-verification',
-      content: 'uDWa7gsQlLiIe_Nk0fG5AvaW8vyEyOFuAZNDdmaZB4M'
+      content: 'FxADGTkaDzhIA5Lt1c8ebMBO9U9y_8lsTsCzot6ZIUs'
     }
   ],
   link: [
-    {
-      rel: 'webmention',
-      href: 'https://webmention.io/jefrydco.id/webmention'
-    },
-    {
-      rel: 'pingback',
-      href: 'https://webmention.io/jefrydco.id/xmlrpc'
-    },
     {
       type: 'text/plain',
       rel: 'author',
@@ -94,7 +80,7 @@ export default {
         publisher: {
           '@type': 'Organization',
           name: 'Erlangga',
-          sameAs: 'https://www.facebook.com/jefrydco.id',
+          sameAs: 'https://www.facebook.com/nggacox',
           logo: {
             '@type': 'imageObject',
             url: `${HOSTNAME}/icon.png`,
@@ -106,36 +92,15 @@ export default {
           '@type': 'Person',
           name: 'Erlangga',
           alternateName: 'erlangga',
-          birthDate: '1995-10-13',
+          birthDate: '1996-10-13',
           gender: { '@type': 'GenderType', alternateName: 'Male' },
           url: [
             `${HOSTNAME}`,
-            'https://jefrydco.tumblr.com/',
-            'https://jefrydco.blogspot.com/',
-            'https://jefrydco.wordpress.com/'
+            'https://erlangga092.wordpress.com/'
           ],
           sameAs: [
-            'https://about.me/jefrydco',
-            'https://angel.co/jefrydco',
-            'https://behance.net/jefrydco',
-            'https://dribbble.com/jefrydco',
-            'https://foursquare.com/jefrydco',
-            'https://github.com/jefrydco',
-            'https://goodreads.com/jefrydco',
-            'https://instagram.com/jefrydco',
-            'https://medium.com/@jefrydco',
-            'https://pinterest.com/jefrydco',
-            'https://plus.google.com/+JefryDewangga',
-            'https://quora.com/jefrydco',
-            'https://reddit.com/user/jefrydco',
-            'https://soundcloud.com/jefrydco',
-            'https://stackoverflow.com/users/7711812/jefry-dewangga',
-            'https://twitter.com/jefrydco',
-            'https://vimeo.com/jefrydco',
-            'https://www.facebook.com/jefrydco',
-            'https://www.last.fm/user/jefrydco',
-            'https://www.linkedin.com/in/jefrydco/',
-            'https://www.xing.com/profile/Jefry_Dewangga'
+            'https://www.facebook.com/nggacox',
+            'https://www.linkedin.com/in/erlangga/',
           ]
         }
       })
