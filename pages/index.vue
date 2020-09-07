@@ -2,7 +2,7 @@
 	<div class="home">
 		<app-header />
 		<app-hero />
-		<div class="wrap px-20 mt-8">
+		<div class="wrap px-20 mt-4">
 			<div class="article">
 			<app-article-card 
 				class="article__card"
@@ -81,13 +81,18 @@ export default {
 		padding-right: 2rem;
 		padding-left: 2rem;
 	}
+
+	@media screen and (max-width: 576px) {
+		padding-right: .75rem;
+		padding-left: .75rem;
+	}
 }
 
 .article {
 	@apply my-4 py-4;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 2.5rem;
+	grid-gap: 2rem;
 
 	@media screen and (max-width: 1200px) {
 		grid-template-columns: 1fr 1fr;

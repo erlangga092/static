@@ -146,8 +146,8 @@ export default {
 
 				> ul {
 					display: flex;
-					align-items: center;
-					justify-content: space-evenly;
+					place-content: flex-end;
+					place-items: center /end;
 					width: 100%;
 					
 					> li {
