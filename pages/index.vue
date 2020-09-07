@@ -84,7 +84,7 @@ export default {
 }
 
 .article {
-	@apply mt-4 py-4;
+	@apply my-4 py-4;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 2.5rem;

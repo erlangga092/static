@@ -1,26 +1,24 @@
 <template>
-	<div>
-		<article>
-			<section class="meta px-8">
-				<div class="meta__title">
-					<h1 class="meta__title__teks my-4 text-lg">
-					<nuxt-link 
-						:to="localePath({ name: 'blog-slug', params: { slug } })"
-						class="link"
-					>
-						{{ title }}
-					</nuxt-link>
-					</h1>
-				</div>
-				<div class="meta__summary">
-					<p class="my-4 text-base">{{ sliceSummary(summary) }}</p>
-				</div>
-			</section>
-			<section class="img w-full h-full overflow-hidden">
-				<app-img :src="img" :alt="title" />
-			</section>
-		</article>
-	</div>
+	<article>
+		<section class="meta px-8 pt-4">
+			<div class="meta__title">
+				<h1 class="meta__title__teks my-4 text-xl">
+				<nuxt-link 
+					:to="localePath({ name: 'blog-slug', params: { slug } })"
+					class="link"
+				>
+					{{ title }}
+				</nuxt-link>
+				</h1>
+			</div>
+			<div class="meta__summary">
+				<p class="my-4 text-md">{{ sliceSummary(summary) }}</p>
+			</div>
+		</section>
+		<section class="img w-full h-full overflow-hidden">
+			<app-img :src="img" :alt="title" />
+		</section>
+	</article>
 </template>
 
 <script>
@@ -83,6 +81,7 @@ article {
 	background-color: var(--card-bg);
 	border-radius: .375rem;
 	overflow: hidden;
+	font-family: 'Merriweather sans', sans-serif;
 
 	&:hover {
 		box-shadow: 0 2px 0 rgba(54, 45, 89, .15),
@@ -93,6 +92,12 @@ article {
 
 	> .meta {
 		flex-grow: 0;
+
+		&__summary {
+			> p {
+				font-family: 'Merriweather sans', sans-serif;
+			}
+		}
 	}
 
 	> .img {
@@ -107,8 +112,9 @@ article {
 }
 
 .link {
-	@apply no-underline;
+	@apply no-underline font-bold;
 	color: var(--text-color);
+	font-family: 'Bitter', sans-serif;
 
 	&:hover {
 		text-decoration: underline;

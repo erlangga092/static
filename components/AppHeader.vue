@@ -94,7 +94,7 @@ export default {
 
 <style lang="postcss">
 .header {
-	@apply z-30 shadow;
+	@apply z-20;
 	width: 100%;
 	top: 0;
 	position: fixed;
@@ -104,18 +104,14 @@ export default {
 	box-sizing: border-box;
 	background-color: var(--card-bg);
 	font-family: 'Bitter', sans-serif;
-	border: 1px solid black;
 
 	&__navbar {
-		@apply h-24 px-20 py-2 shadow-md;
+		@apply h-20 px-20 py-2 shadow-md;
 		width: 100%;
 		display: grid;
-		grid-template-columns: 55% 45%;
+		grid-template-columns: 1fr 1fr;
 		align-items: center;
 		justify-content: center;
-		top: 0;
-		position: fixed;
-		background-color: var(--card-bg);
 
 		@media screen and (max-width: 768px) {
 			padding-right: 2rem;
@@ -135,16 +131,16 @@ export default {
 
 		&__menu {
 			display: grid;
-			grid-template-columns: 70% 30%;
+			grid-template-columns: 80% 20%;
 			align-items: center;
 			justify-content: center;
 			height: 100%;
-			@media screen and (max-width: 768px) {
+			@media screen and (max-width: 976px) {
 				grid-template-columns: 1fr;
 			}
 
 			&__list {
-				@media screen and (max-width: 768px) {
+				@media screen and (max-width: 976px) {
 					display: none;
 				}
 
