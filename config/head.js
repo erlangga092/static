@@ -16,7 +16,7 @@ export default {
     {
 			hid: 'og:title',
 			name: 'og:title',
-			propertu: 'og:title',
+			property: 'og:title',
 			content: 'Erlangga'
     },
     {
