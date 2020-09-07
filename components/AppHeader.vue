@@ -5,14 +5,14 @@
 				<h1 class="my-0 text-2xl">ERL_Angga</h1>
 			</section>
 			<aside class="header__navbar__menu">
-				<ul class="flex items-center justify-end w-full px-8 mx-0 my-0 list-none">
+				<ul class="px-8 mx-0 my-0 list-none">
 					<li class="mx-0 my-0 mr-4">
 						<nuxt-link to="/">Home</nuxt-link>
 					</li>
 					<li class="mx-0 my-0 mr-4">
 						<nuxt-link to="/blog">Blog</nuxt-link>
 					</li>
-					<li class="mx-0 my-0">
+					<li class="mx-0 my-0 mr-4">
 						<nuxt-link 
 							v-for="locale in availableLocales"
 							:key="locale.id"
@@ -23,6 +23,9 @@
 							{{ locale.iso }}
 						</nuxt-link>				
 					</li>
+					<li class="mx-0 my-0">
+						<app-switch-theme v-model="isDark" />
+					</li>
 				</ul>
 			</aside>
 		</div>
@@ -30,10 +33,18 @@
 </template>
 
 <script>
+import AppSwitchTheme from '~/components/AppSwitchTheme';
+
+const Cookie = process.client ? require('js-cookie') : undefined
+
 export default {
+	components: {
+		AppSwitchTheme
+	},
 	data() {
 		return {
-			availableLocales: []
+			availableLocales: [],
+			isDark: false
 		}
 	},
 	created() {
@@ -42,23 +53,67 @@ export default {
 		const defaultLocale = this.$i18n.defaultLocale;
 		const availableLocales = locales.filter(i => i.code !== locale);
 		this.availableLocales = availableLocales;
+	},
+	mounted() {
+		this.initColorScheme()
+	},
+	methods: {
+		initColorScheme() {
+			const isDark = Cookie.get('d')
+			if (isDark) {
+				if (parseInt(isDark)) {
+					this.isDark = true
+				}
+			} else if (
+				window.matchMedia('(prefers-color-scheme)').media !== 'not all'
+			) {
+				const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+				if (darkModeMediaQuery.matches) {
+					this.isDark = true
+				}
+				darkModeMediaQuery.addListener(e => {
+					const darkModeOn = e.matches
+					this.isDark = darkModeOn
+				})
+			}
+		}
+	},
+	head() {
+		return {
+			bodyAttrs: {
+				class: this.isDark ? 'dark' : 'light'
+			}
+		}
 	}
 }
 </script>
 
 <style lang="postcss">
 .header {
-	@apply w-full top-0 fixed flex items-center justify-center absolute z-30 shadow;
+	@apply absolute z-30 shadow;
+	width: 100%;
+	top: 0;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	box-sizing: border-box;
 	background-color: var(--card-bg);
 	font-family: 'Bitter', sans-serif;
 
 	&__navbar {
-		@apply w-full h-20 grid grid-cols-2 px-20 py-2 items-center shadow-md top-0 fixed;
+		@apply h-24 px-20 py-2 shadow-md;
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		top: 0;
+		position: fixed;
 		background-color: var(--card-bg);
 
 		&__logo {
-			@apply flex col-span-1 items-center;
+			display: flex;
+			align-items: center;
 
 			> h1 {
 				color: var(--text-color);
@@ -67,18 +122,28 @@ export default {
 		}
 
 		&__menu {
-			@apply flex items-center justify-center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			
 			@media screen and (max-width: 768px) {
 				display: none;
 			}
 
-			> ul > li {
-				@apply p-2;
-			}
+			> ul {
+				display: flex;
+				align-items: center;
+				justify-content: space-evenly;
+				width: 100%;
+				
+				> li {
+					@apply p-2;
 
-			> ul > li > a {
-				@apply underline;
-				color: var(--text-color);
+					> a {
+						@apply underline;
+						color: var(--text-color);
+					}
+				}
 			}
 		}
 	}

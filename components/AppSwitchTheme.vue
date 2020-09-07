@@ -68,21 +68,9 @@ export default {
 <style lang="postcss">
 /* purgecss start ignore */
 .switch {
-  @apply absolute z-40 fixed;
-  top: 1rem;
-  right: 1.5rem;
-  @media screen and (max-width: 992px) {
-		top: 4.5rem;
-		right: 1rem;
-	}
-
   &__btn {
     @apply w-12 h-12 rounded-full shadow;
     background-color: var(--card-bg);
-		@media screen and (max-width: 992px) {
-			width: 3.5rem;
-			height: 3.5rem;
-		}
 
     &:focus {
       @apply outline-none;

@@ -1,6 +1,7 @@
 import {
 	build,
-	modules
+	modules,
+	head
 } from './config'
 
 export default {
@@ -18,7 +19,7 @@ export default {
   ** Headers of the page
   ** See https://nuxtjs.org/api/configuration-head
   */
-  head: {},
+  head,
 	/*
 	 ** Global CSS
 	 */

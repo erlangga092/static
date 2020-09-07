@@ -76,6 +76,7 @@ export default {
 		padding-right: 2rem;
 		padding-left: 2rem;
 	}
+
 	@media screen and (max-width: 976px) {
 		padding-right: 2rem;
 		padding-left: 2rem;
@@ -84,9 +85,11 @@ export default {
 
 .article {
 	@apply mt-4 py-4 grid grid-cols-3 gap-8;
+
 	@media screen and (max-width: 1200px) {
 		grid-template-columns: 1fr 1fr;
 	}
+	
 	@media screen and (max-width: 976px) {
 		grid-template-columns: 1fr;
 	}

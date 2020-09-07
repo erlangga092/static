@@ -75,9 +75,13 @@ export default {
 
 <style lang="postcss">
 article {
-	@apply flex flex-col shadow;
+	@apply shadow;
+	display: flex;
+	flex-direction: column;
 	background-color: var(--card-bg);
 	border-radius: .375rem;
+	height: 25rem;
+	overflow: hidden;
 
 	&:hover {
 		box-shadow: 0 2px 0 rgba(54, 45, 89, .15),
@@ -88,21 +92,16 @@ article {
 
 	> .meta {
 		flex-grow: 0;
-		
-		&__title {
-			&__teks {
-				> h1 > a {
-					font-family: 'Bitter', sans-serif;
-				}
-			}
-		}
 	}
 
 	> .img {
-		@apply flex flex-col items-end;
+		display: flex;
+		flex-direction: column;
+		align-items: end;
 		clip-path: polygon(-1% 3.49vw, 101% 0%, 101% 101%, -1% 101%);
 		flex-grow: 1;
 		background-size: cover;
+		object-fit: cover;
 		background-position: 50% 50%;
 		outline: none;
 	}
