@@ -7,6 +7,10 @@
 @import './transition';
 
 /* purgecss start ignore */
+:root {
+	--md: @media screen and (max-width: 768px);
+}
+
 html, body {
 	scroll-behavior: smooth;
 	overflow-x: hidden;

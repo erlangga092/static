@@ -1,24 +1,26 @@
 <template>
-	<article>
-		<section class="meta px-8">
-			<div class="meta__title">
-				<h1 class="meta__title__teks my-4 text-lg">
-				<nuxt-link 
-					:to="localePath({ name: 'blog-slug', params: { slug } })"
-					class="link"
-				>
-					{{ title }}
-				</nuxt-link>
-				</h1>
-			</div>
-			<div class="meta__summary">
-				<p class="my-4 text-base">{{ sliceSummary(summary) }}</p>
-			</div>
-		</section>
-		<section class="img w-full h-full overflow-hidden">
-			<app-img :src="img" :alt="title" />
-		</section>
-	</article>
+	<div>
+		<article>
+			<section class="meta px-8">
+				<div class="meta__title">
+					<h1 class="meta__title__teks my-4 text-lg">
+					<nuxt-link 
+						:to="localePath({ name: 'blog-slug', params: { slug } })"
+						class="link"
+					>
+						{{ title }}
+					</nuxt-link>
+					</h1>
+				</div>
+				<div class="meta__summary">
+					<p class="my-4 text-base">{{ sliceSummary(summary) }}</p>
+				</div>
+			</section>
+			<section class="img w-full h-full overflow-hidden">
+				<app-img :src="img" :alt="title" />
+			</section>
+		</article>
+	</div>
 </template>
 
 <script>
@@ -80,7 +82,6 @@ article {
 	flex-direction: column;
 	background-color: var(--card-bg);
 	border-radius: .375rem;
-	height: 25rem;
 	overflow: hidden;
 
 	&:hover {
@@ -97,11 +98,9 @@ article {
 	> .img {
 		display: flex;
 		flex-direction: column;
-		align-items: end;
 		clip-path: polygon(-1% 3.49vw, 101% 0%, 101% 101%, -1% 101%);
 		flex-grow: 1;
 		background-size: cover;
-		object-fit: cover;
 		background-position: 50% 50%;
 		outline: none;
 	}

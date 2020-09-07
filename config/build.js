@@ -35,7 +35,7 @@ md.use(mitdr, {
 export default {
 	postcss: {
 		plugins: {
-			'postcss-nested': {},
+			'postcss-nested': {}
 		}
 	},
 	extend(config, { isDev, isClient }) {

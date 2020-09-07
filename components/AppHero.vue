@@ -9,11 +9,6 @@
 	</main>
 </template>
 
-<script>
-export default {
-}
-</script>
-
 <style lang="postcss">
 .hero {
 	width: 100%;

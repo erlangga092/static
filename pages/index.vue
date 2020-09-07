@@ -68,7 +68,7 @@ export default {
 
 <style lang="postcss">
 .home {
-	margin-top: 4rem;
+	margin-top: 4.2rem;
 }
 
 .wrap {
@@ -84,7 +84,10 @@ export default {
 }
 
 .article {
-	@apply mt-4 py-4 grid grid-cols-3 gap-8;
+	@apply mt-4 py-4;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 2.5rem;
 
 	@media screen and (max-width: 1200px) {
 		grid-template-columns: 1fr 1fr;
@@ -95,9 +98,10 @@ export default {
 	}
 
 	> &__card {
-		@apply col-span-1 shadow overflow-hidden;
+		@apply shadow;
 		background-color: var(--card-bg);
 		border-radius: .375rem;
+		overflow: hidden;
 	}
 }
 </style>
