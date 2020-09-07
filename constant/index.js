@@ -1,1 +1,1 @@
-export const HOSTNAME = 'https://erlangga.netlify.app'
+export const HOSTNAME = 'https://erlangga.now.sh'

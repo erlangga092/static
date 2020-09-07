@@ -5,7 +5,7 @@ export default {
     if (title) {
       return `${title} - Erlangga`
     }
-    return 'Jefrydco'
+    return 'Erlangga'
   },
   meta: [
     { charset: 'utf-8' },
