@@ -17,7 +17,7 @@ export default {
       hid: 'og:image:alt',
       name: 'og:image:alt',
       property: 'og:image:alt',
-      content: 'Jefrydco'
+      content: 'Erlangga'
     },
     { property: 'fb:admins', content: 100003000286186 },
     {
@@ -42,7 +42,7 @@ export default {
     {
       type: 'text/plain',
       rel: 'author',
-      href: `${HOSTNAME}/humans.txt`
+      href: `${HOSTNAME}/robots.txt`
     },
     {
       rel: 'dns-prefetch',
@@ -69,11 +69,11 @@ export default {
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org/',
         '@type': 'WebSite',
-        name: 'Jefrydco',
-        headline: 'A personal site of Jefry Dewangga',
-        description: 'A personal site of Jefry Dewangga',
-        about: 'A personal site of Jefry Dewangga',
-        keywords: 'jefrydco, Jefry Dewangga',
+        name: 'Erlangga',
+        headline: 'A personal site of Erlangga',
+        description: 'A personal site of Erlangga',
+        about: 'A personal site of Erlangga',
+        keywords: 'erlangga, Erlangga',
         genre: ['Personal', 'Tutorial', 'Programming', 'Review', 'Science'],
         copyrightYear: new Date().getFullYear(),
         dateCreated: '2017-03-12',
@@ -93,7 +93,7 @@ export default {
         },
         publisher: {
           '@type': 'Organization',
-          name: 'Jefrydco',
+          name: 'Erlangga',
           sameAs: 'https://www.facebook.com/jefrydco.id',
           logo: {
             '@type': 'imageObject',
@@ -104,9 +104,9 @@ export default {
         },
         creator: {
           '@type': 'Person',
-          name: 'Jefry Dewangga',
-          alternateName: 'Jefrydco',
-          birthDate: '1998-03-12',
+          name: 'Erlangga',
+          alternateName: 'erlangga',
+          birthDate: '1995-10-13',
           gender: { '@type': 'GenderType', alternateName: 'Male' },
           url: [
             `${HOSTNAME}`,
