@@ -14,6 +14,12 @@ export default {
       content: 'width=device-width, initial-scale=1, minimum-scale=1'
     },
     {
+			hid: 'og:title',
+			name: 'og:title',
+			propertu: 'og:title',
+			content: 'Erlangga'
+    },
+    {
       hid: 'og:image:alt',
       name: 'og:image:alt',
       property: 'og:image:alt',
