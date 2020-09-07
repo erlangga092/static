@@ -20,6 +20,12 @@ export default {
 			content: 'Erlangga'
     },
     {
+			hid: 'og:description',
+			name: 'og:description',
+			property: 'og:description',
+			content: 'Accountant and Fullstack Developer'
+    },
+    {
       hid: 'og:image:alt',
       name: 'og:image:alt',
       property: 'og:image:alt',
@@ -43,10 +49,6 @@ export default {
     {
       rel: 'dns-prefetch',
       href: 'https://fonts.gstatic.com'
-    },
-    {
-      rel: 'preconnect',
-      href: 'https://d33wubrfki0l68.cloudfront.net'
     },
     {
       rel: 'preconnect',
