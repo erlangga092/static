@@ -7,11 +7,22 @@ export default {
     }
     return 'Erlangga'
   },
+  title: 'Erlangga',
   meta: [
     { charset: 'utf-8' },
     {
       name: 'viewport',
       content: 'width=device-width, initial-scale=1, minimum-scale=1'
+    },
+    {
+      hid: 'title',
+      name: 'title',
+      content: 'Erlangga'
+    },
+    {
+      hid: 'description',
+      name: 'description',
+      content: 'Accountant and Fullstack Developer'
     },
     {
 			hid: 'og:title',
