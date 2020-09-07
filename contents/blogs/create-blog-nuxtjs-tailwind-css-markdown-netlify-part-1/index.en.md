@@ -1,7 +1,7 @@
 ---
 title: Why Do You Have to Create Blog using Nuxt.js, Tailwind CSS, Markdown and Netlify?
 description: Creating blog using Nuxt.js and Tailwind CSS can sharpen our creativity
-summary: This section discuss the background why we have to write blog content using Markdown, use Nuxt.js as a blog platform, design blog page using Tailwind CSS, and host our blog using Netlify.
+summary: This section discuss the background why we have to write blog content using Markdown, use Nuxt.js as a blog platform.
 img: /cover/2019/12/create-blog-nuxtjs-tailwind-css-markdown-netlify-by-jefrydco.jpg
 imgCreator: jefrydco
 postedDate: 2019-12-17T02:48:54.928Z

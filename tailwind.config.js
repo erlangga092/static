@@ -8,7 +8,8 @@ module.exports = {
   theme: {
     extend: {
       height: {
-        '128': '32rem'
+        '128': '32rem',
+        '96': '28rem'
       },
       screens: {
 	      'xl': {'max': '1279px'},

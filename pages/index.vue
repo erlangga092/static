@@ -2,9 +2,10 @@
 	<div class="home">
 		<app-header />
 		<app-hero />
-		<div class="article">
+		<div class="wrap px-20 mt-8">
+			<div class="article">
 			<app-article-card 
-				class="article__card hover:shadow-lg"
+				class="article__card"
 				v-for="blog in blogs"
 				:key="blog.id"
 				:img="blog.img"
@@ -15,6 +16,7 @@
 				:readingTime="blog.readingTime"
 				:slug="blog.slug"
 			/>
+			</div>
 		</div>
 	</div>
 </template>
@@ -66,18 +68,33 @@ export default {
 
 <style lang="postcss">
 .home {
-	margin-top: 7rem;
+	margin-top: 4rem;
+}
+
+.wrap {
+	@media screen and (max-width: 1200px) {
+		padding-right: 2rem;
+		padding-left: 2rem;
+	}
+	@media screen and (max-width: 976px) {
+		padding-right: 2rem;
+		padding-left: 2rem;
+	}
 }
 
 .article {
-	@apply mt-4 py-4 grid grid-cols-2 gap-8;
+	@apply mt-4 py-4 grid grid-cols-3 gap-8;
+	@media screen and (max-width: 1200px) {
+		grid-template-columns: 1fr 1fr;
+	}
 	@media screen and (max-width: 976px) {
 		grid-template-columns: 1fr;
 	}
 
 	> &__card {
-		@apply col-span-1 rounded shadow overflow-hidden;
+		@apply col-span-1 shadow overflow-hidden;
 		background-color: var(--card-bg);
+		border-radius: .375rem;
 	}
 }
 </style>

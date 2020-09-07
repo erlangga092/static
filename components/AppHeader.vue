@@ -5,26 +5,26 @@
 				<h1 class="my-0 text-2xl">ERL_Angga</h1>
 			</section>
 			<aside class="header__navbar__menu">
-				<ul class="flex items-center justify-between px-8 mx-0 my-0 list-none">
+				<ul class="flex items-center justify-end w-full px-8 mx-0 my-0 list-none">
 					<li class="mx-0 my-0 mr-4">
 						<nuxt-link to="/">Home</nuxt-link>
 					</li>
-					<li class="mx-0 my-0">
+					<li class="mx-0 my-0 mr-4">
 						<nuxt-link to="/blog">Blog</nuxt-link>
+					</li>
+					<li class="mx-0 my-0">
+						<nuxt-link 
+							v-for="locale in availableLocales"
+							:key="locale.id"
+							:aria-label="locale.name"
+							:to="switchLocalePath(locale.code)"					
+							class="translation"
+						>
+							{{ locale.iso }}
+						</nuxt-link>				
 					</li>
 				</ul>
 			</aside>
-			<section class="header__navbar__search">
-				<nuxt-link 
-					v-for="locale in availableLocales"
-					:key="locale.id"
-					:aria-label="locale.name"
-					:to="switchLocalePath(locale.code)"					
-					class="translation hover:bg-green-400"
-				>
-					{{ locale.iso }}
-				</nuxt-link>				
-			</section>
 		</div>
 	</header>
 </template>
@@ -48,27 +48,22 @@ export default {
 
 <style lang="postcss">
 .header {
-	@apply w-full top-0 flex items-center justify-center absolute;
+	@apply w-full top-0 fixed flex items-center justify-center absolute z-30 shadow;
 	box-sizing: border-box;
 	background-color: var(--card-bg);
+	font-family: 'Bitter', sans-serif;
 
 	&__navbar {
-		@apply w-full h-24 grid grid-cols-3 px-8 py-2 items-center shadow-sm;
-		background-color: var(--bg-card);
-		@media screen and (max-width: 768px) {
-			grid-template-columns: 1fr 1fr;
-		}
+		@apply w-full h-20 grid grid-cols-2 px-20 py-2 items-center shadow-md top-0 fixed;
+		background-color: var(--card-bg);
 
 		&__logo {
 			@apply flex col-span-1 items-center;
 
 			> h1 {
 				color: var(--text-color);
+				font-family: 'Bitter', sans-serif;
 			}
-		}
-
-		&__search {
-			@apply flex items-center justify-end w-full;				
 		}
 
 		&__menu {
@@ -89,7 +84,7 @@ export default {
 	}
 }
 
-.translation {
-	@apply px-4 py-1 rounded text-white text-lg mr-4 bg-green-500;
+.translation:hover {
+	color: var(--text-link);
 }
 </style>

@@ -2,7 +2,7 @@
 	<div>
 		<app-switch-theme v-model="isDark" />
 		<div class="flex justify-center">
-			<div class="wrapper w-4/5 border-box relative">
+			<div class="wrapper w-full border-box relative">
 				<Nuxt />
 			</div>
 		</div>
@@ -58,9 +58,5 @@ export default {
 </script>
 
 <style lang="postcss">
-.wrapper {
-	@media screen and (max-width: 976px) {
-		width: 95%;
-	}
-}
+
 </style>

@@ -68,7 +68,7 @@ export default {
 <style lang="postcss">
 /* purgecss start ignore */
 .switch {
-  @apply absolute z-20 fixed;
+  @apply absolute z-40 fixed;
   top: 1rem;
   right: 1.5rem;
   @media screen and (max-width: 992px) {

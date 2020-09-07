@@ -1,7 +1,7 @@
 ---
 title: Mengapa Kamu Harus Membuat Blog dengan Nuxt.js, Tailwind CSS, Markdown dan Netlify?
 description: Membuat blog menggunakan Nuxt.js dan Tailwind CSS dapat mengasah kreatifitas kita
-summary: Bagian ini membahas latar belakang mengapa kita harus menulis konten blog menggunakan Markdown, menggunakan Nuxt.js sebagai platform blog, mendesain halaman blog menggunakan Tailwind CSS, dan menghosting blog kita menggunakan Netlify.
+summary: Bagian ini membahas latar belakang mengapa kita harus menulis konten blog menggunakan Markdown, menggunakan Nuxt.js sebagai platform blog.
 img: /cover/2019/12/create-blog-nuxtjs-tailwind-css-markdown-netlify-by-jefrydco.jpg
 imgCreator: jefrydco
 postedDate: 2019-12-17T02:48:54.928Z
