@@ -20,11 +20,13 @@ export default {
     {
       hid: 'title',
       name: 'title',
+      property: 'title',
       content: 'Erlangga'
     },
     {
       hid: 'description',
       name: 'description',
+      property: 'description',
       content: 'Accountant and Fullstack Developer'
     },
     {
