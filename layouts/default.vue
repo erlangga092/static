@@ -1,8 +1,5 @@
 <template>
 	<div class="default">
-		<div class="default__header">
-			<app-header />
-		</div>
 		<div class="default__wrapper">
 			<nuxt />
 		</div>
@@ -25,12 +22,6 @@ export default {
 	justify-content: center; 
 	align-items: center;
 	flex-direction: column;
-
-	&__header {
-		top: 0;
-		position: fixed;
-		width: 100%;
-	}
 
 	> .wrapper {
 		width: 100%;

@@ -1,14 +1,19 @@
 <template>
-	<div v-if="blog !== null && typeof blog !== 'undefined'" class="blog">
-		<section class="img">
-			<app-img :src="blog.img" alt="title" />
-		</section>
-		<section class="blog__wrap">
-			<h1 class="date">{{ formatDate(blog.postedDate) }}</h1>
-			<h1>{{ formatDate(blog.updatedDate) }}</h1>
-			<h1>{{ blog.readingTime.text }}</h1>
-			<component :is="blog.component" />
-		</section>
+	<div class="post">
+		<aside class="nav">
+			<app-header />
+		</aside>
+		<div v-if="blog !== null && typeof blog !== 'undefined'" class="blog">
+			<section class="img">
+				<app-img :src="blog.img" alt="title" />
+			</section>
+			<section class="blog__wrap">
+				<div class="blog__wrap__meta">
+					<h1 class="text-2xl">{{ blog.title }}</h1>
+				</div>
+				<component :is="blog.component" />
+			</section>
+		</div>
 	</div>
 </template>
 
@@ -17,8 +22,15 @@ import readingTime from 'reading-time';
 import { isExist } from '~/utils';
 import { formatDate } from '~/mixins';
 
+import AppHeader from '~/components/AppHeader';
+
+const Cookie = process.client ? require('js-cookie') : undefined;
+
 export default {
 	mixins: [formatDate],
+	component: {
+		AppHeader
+	},
 	data() {
 		return {
 			blog: null
@@ -52,46 +64,121 @@ export default {
 		}
 	},
 	mounted() {
+		this.initColorScheme()
 		const hash = window.location.hash;
 		if (hash) {
 			const element = document.querySelector(hash);
 			element.toScrollIntoView({});
+		}
+	},
+	methods: {
+		initColorScheme() {
+			const isDark = Cookie.get('d');
+			if (isDark) {
+				if (parseInt(isDark)) {
+					this.isDark = true;
+				}
+			} else if (
+				window.matchMedia('(prefers-color-scheme)').media !== 'not all'
+			) {
+				const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+				if (darkModeMediaQuery.matches) {
+					this.isDark = true;
+				}
+				darkModeMediaQuery.addListener(e => {
+					const darkModeOn = e.matches;
+					this.isDark = darkModeOn;
+				})
+			}
+		}
+	},
+	head() {
+		return {
+			bodyAttrs: {
+				class: this.isDark ? 'dark' : 'light'
+			}
 		}
 	}
 }
 </script>
 
 <style lang="postcss">
-.blog {
-	margin-top: -5rem;
-	width: 100%;
+.post {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
 	justify-content: center;
-	font-family: 'Merriweather sans', sans-serif;
+	flex-direction: column;
+	width: 100%;
 
-	> .img {
-		@apply w-screen overflow-hidden;
-		height: 42rem;
-
-		> img {
-			@apply w-screen object-cover;
-		}
+	.nav {
+		@apply z-30;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
 	}
 
-	&__wrap {
-		@apply mb-12 px-16 rounded-md overflow-hidden shadow-xl;
-		background-color: var(--card-bg);
-		width: 75%;
+	.blog {
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		margin-top: -17rem;
+		font-family: 'Merriweather sans', sans-serif;
 
-		> h1, h2, h3, h4, h5, h6 {
-			font-family: 'Bitter', serif;
+		> .img {
+			@apply w-screen overflow-hidden;
+			margin-top: -5rem;
+			height: 42rem;
+			border-bottom: transparent;
+
+			@media screen and (max-width: 576px) {
+				margin-top: 3rem;
+			}
+
+			> img {
+				@apply w-screen object-cover;
+			}
+		}
+
+		&__wrap {
+			@apply mb-12 px-16 rounded-md overflow-hidden shadow-xl z-10;
+			background-color: var(--card-bg);
+			width: 75%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			margin-top: -17rem;
+
+			@media screen and (max-width: 992px) {
+				width: 85%;
+				margin-top: -21rem;
+			}
+
+			@media screen and (max-width: 768px) {
+				width: 90%;
+				margin-top: -24rem;
+				padding-right: 2.75rem;
+				padding-left: 2.75rem;
+			}
+
+			@media screen and (max-width: 576px) {
+				margin-top: -31.5rem;
+				padding-right: 2.5rem;
+				padding-left: 2.5rem;
+			}
+
+			&__meta {
+				width: 100%;
+				
+				> h1 {
+					font-family: 'Bitter', serif;
+				}
+			}
+
+			> h1, h2, h3, h4, h5, h6 {
+				font-family: 'Bitter', serif;
+			}
 		}
 	}
 }
