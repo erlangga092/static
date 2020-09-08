@@ -5,7 +5,7 @@
 				<h1 class="meta__title__teks my-4 text-xl">
 				<nuxt-link 
 					:to="localePath({ name: 'blog-slug', params: { slug } })"
-					class="link"
+					class="links"
 				>
 					{{ title }}
 				</nuxt-link>
@@ -111,7 +111,7 @@ article {
 	}
 }
 
-.link {
+.links {
 	@apply no-underline font-bold;
 	color: var(--text-color);
 	font-family: 'Bitter', sans-serif;

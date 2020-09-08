@@ -1,8 +1,10 @@
 <template>
-	<div v-if="blog !== null && typeof blog !== 'undefined'">
-		<section class="blog">
+	<div v-if="blog !== null && typeof blog !== 'undefined'" class="blog">
+		<section class="img">
 			<app-img :src="blog.img" alt="title" />
-			<h1>{{ formatDate(blog.postedDate) }}</h1>
+		</section>
+		<section class="blog__wrap">
+			<h1 class="date">{{ formatDate(blog.postedDate) }}</h1>
 			<h1>{{ formatDate(blog.updatedDate) }}</h1>
 			<h1>{{ blog.readingTime.text }}</h1>
 			<component :is="blog.component" />
@@ -61,47 +63,36 @@ export default {
 
 <style lang="postcss">
 .blog {
-@apply mb-12 px-12 rounded overflow-hidden shadow relative;
-  background-color: var(--card-bg);
+	margin-top: -5rem;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Merriweather sans', sans-serif;
 
-  .image-placeholder {
-    @apply mb-8;
-  }
+	> .img {
+		@apply w-screen overflow-hidden;
+		height: 42rem;
 
-  img {
-    @apply w-full h-auto;
-  }
+		> img {
+			@apply w-screen object-cover;
+		}
+	}
 
-  &__translations {
-    @apply leading-normal mb-8 py-3 px-4 rounded-lg border;
-    background-color: var(--inline-code-bg);
-    border-color: var(--inline-code-border);
-    color: var(--inline-code-text);
+	&__wrap {
+		@apply mb-12 px-16 rounded-md overflow-hidden shadow-xl;
+		background-color: var(--card-bg);
+		width: 75%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin-top: -17rem;
 
-    a:not(:last-child) {
-      @apply mr-3;
-    }
-  }
-
-  &__content {
-    @apply p-6;
-  }
-
-  &__meta {
-    @apply mb-8;
-  }
-
-  &__title {
-    @apply font-bold text-2xl mt-0 mb-4;
-  }
-
-  &__date {
-    @apply leading-normal mb-4 text-base;
-  }
-
-  &__link {
-    @apply absolute top-0 left-0 w-full h-full overflow-hidden z-0;
-    text-indent: -9999px;
-  }
+		> h1, h2, h3, h4, h5, h6 {
+			font-family: 'Bitter', serif;
+		}
+	}
 }
 </style>

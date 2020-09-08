@@ -3,7 +3,14 @@
 	<header class="header">
 		<div class="header__navbar">
 			<section class="header__navbar__logo">
-				<h1 class="my-0 text-2xl">ERL_Angga</h1>
+				<h1 class="my-0 text-2xl">
+					<nuxt-link
+						to="/"
+						class="header__navbar__logo__home"
+					>
+						ERL_Angga
+					</nuxt-link>
+				</h1>
 			</section>
 			<aside class="header__navbar__menu">
 				<div class="header__navbar__menu__list">
@@ -179,5 +186,10 @@ export default {
 
 .translation:hover {
 	color: var(--text-link);
+}
+
+.header__navbar__logo__home {
+	@apply no-underline;
+	color: var(--text-color);
 }
 </style>

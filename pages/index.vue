@@ -1,6 +1,5 @@
 <template>
 	<div class="home">
-		<app-header />
 		<app-hero />
 		<div class="wrap px-20 mt-4">
 			<div class="article">
@@ -22,7 +21,6 @@
 </template>
 
 <script>
-import AppHeader from '~/components/AppHeader';
 import AppHero from '~/components/AppHero';
 import AppArticleCard from '~/components/AppArticleCard';
 import slugs from '~/contents/blogs';
@@ -30,7 +28,6 @@ import readingTime from 'reading-time';
 
 export default {
 	components: {
-		AppHeader,
 		AppHero,
 		AppArticleCard
 	},
