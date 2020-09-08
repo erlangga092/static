@@ -8,6 +8,9 @@ export default {
     return 'Erlangga'
   },
   title: 'Erlangga',
+  htmlAttrs: {
+		lang: 'en'
+  },
   meta: [
     { charset: 'utf-8' },
     {
