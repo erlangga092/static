@@ -7,7 +7,6 @@ export default {
     }
     return 'Erlangga'
   },
-  title: 'Erlangga',
   htmlAttrs: {
 		lang: 'en'
   },
@@ -21,25 +20,25 @@ export default {
       hid: 'title',
       name: 'title',
       property: 'title',
-      content: 'Erlangga'
+      content: this.$i18n.t('ogTitle')
     },
     {
       hid: 'description',
       name: 'description',
       property: 'description',
-      content: 'Accountant and Fullstack Developer'
+      content: this.$i18n.t('ogDescription')
     },
     {
 			hid: 'og:title',
 			name: 'og:title',
 			property: 'og:title',
-			content: 'Erlangga'
+			content: this.$i18n.t('title')
     },
     {
 			hid: 'og:description',
 			name: 'og:description',
 			property: 'og:description',
-			content: 'Accountant and Fullstack Developer'
+			content: this.$i18n.t('description')
     },
     {
       hid: 'og:image:alt',
