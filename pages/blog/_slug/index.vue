@@ -3,7 +3,7 @@
 		<aside class="nav">
 			<app-header />
 		</aside>
-		<div v-if="blog !== null && typeof blog !== 'undefined'" class="blog">
+		<div v-if="blog !== null && typeof blog !== 'undefined'" id="blog">
 			<section class="img">
 				<app-img :src="blog.img" alt="title" />
 			</section>
@@ -117,7 +117,7 @@ export default {
 		left: 0;
 	}
 
-	.blog {
+	#blog {
 		width: 100%;
 		display: flex;
 		flex-direction: column;
