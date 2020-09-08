@@ -20,25 +20,25 @@ export default {
       hid: 'title',
       name: 'title',
       property: 'title',
-      content: this.$i18n.t('ogTitle')
+      content: 'Erlangga'
     },
     {
       hid: 'description',
       name: 'description',
       property: 'description',
-      content: this.$i18n.t('ogDescription')
+      content: 'I am software enginer'
     },
     {
 			hid: 'og:title',
 			name: 'og:title',
 			property: 'og:title',
-			content: this.$i18n.t('title')
+			content: 'Erlangga'
     },
     {
 			hid: 'og:description',
 			name: 'og:description',
 			property: 'og:description',
-			content: this.$i18n.t('description')
+			content: 'I am software enginer'
     },
     {
       hid: 'og:image:alt',
