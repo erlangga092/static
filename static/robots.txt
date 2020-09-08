@@ -1,9 +1,2 @@
-/* AUTHOR */
-	Author		  : Erlangga
-	From	  	  : Sukoharjo, Central Java, Indonesia
-	Twitter		  : @erlangga
-
-/* SITE */
-	Language	  : Indonesian / English
-	Built with	: Vue.js, Nuxt.js, Tailwind CSS
-	Launched	  : 2020
+User-agent: *
+Sitemap: https://erlangga.now.sh/sitemap.xml
