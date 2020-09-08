@@ -3,12 +3,12 @@
 		<aside class="nav">
 			<app-header />
 		</aside>
-		<div v-if="blog !== null && typeof blog !== 'undefined'" id="blog">
+		<div v-if="blog !== null && typeof blog !== 'undefined'" class="blog-post">
 			<section class="img">
 				<app-img :src="blog.img" alt="title" />
 			</section>
-			<section class="blog__wrap">
-				<div class="blog__wrap__meta">
+			<section class="blog-post__wrap">
+				<div class="blog-post__wrap__meta">
 					<h1 class="text-2xl">{{ blog.title }}</h1>
 				</div>
 				<component :is="blog.component" />
@@ -47,7 +47,6 @@ export default {
 			} else {
 				blog = require(`~/contents/blogs/${slug}/index.${locale}.md`);
 			}
-			console.log(blog.attributes)
 
 			this.blog = {
 				img: blog.attributes.img,
@@ -117,7 +116,7 @@ export default {
 		left: 0;
 	}
 
-	#blog {
+	.blog-post {
 		width: 100%;
 		display: flex;
 		flex-direction: column;
