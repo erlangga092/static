@@ -30,6 +30,7 @@ export default {
 
 	@media screen and (max-width: 976px) {
 		right: 1.5rem;
+		top: 7rem;
 	}
 
 	&__btn {

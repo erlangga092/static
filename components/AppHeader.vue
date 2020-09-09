@@ -121,8 +121,8 @@ export default {
 		justify-content: center;
 
 		@media screen and (max-width: 768px) {
-			padding-right: 2rem;
-			padding-left: 2rem;
+			padding-right: 1.75rem;
+			padding-left: 1.75rem;
 		}
 
 		&__logo {
