@@ -73,11 +73,11 @@ export default {
 		}
 	},
 	mounted() {
-		this.initColorScheme()
+		this.initColorScheme();
 		const hash = window.location.hash;
 		if (hash) {
 			const element = document.querySelector(hash);
-			element.toScrollIntoView({});
+			element.toScrollIntoView({ behavior: 'smooth' });
 		}
 	},
 	methods: {
@@ -188,6 +188,14 @@ export default {
 			> h1, h2, h3, h4, h5, h6 {
 				font-family: 'Bitter', serif;
 			}
+		}
+	}
+
+	> .switch__lang__slug {
+		display: none;
+
+		@media screen and (max-width: 976px) {
+			display: block;
 		}
 	}
 }
