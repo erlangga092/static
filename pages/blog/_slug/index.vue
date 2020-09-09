@@ -22,6 +22,9 @@
 			/>
 		</client-only>
 		<app-to-top />
+		<div class="switch__lang__slug">
+			<app-switch-lang />
+		</div>
 	</div>
 </template>
 
@@ -32,6 +35,7 @@ import { formatDate } from '~/mixins';
 
 import AppHeader from '~/components/AppHeader';
 import AppToTop from '~/components/AppToTop';
+import AppSwitchLang from '~/components/AppSwitchLang';
 
 const Cookie = process.client ? require('js-cookie') : undefined;
 
@@ -39,7 +43,8 @@ export default {
 	mixins: [formatDate],
 	component: {
 		AppHeader,
-		AppToTop
+		AppToTop,
+		AppSwitchLang
 	},
 	data() {
 		return {
