@@ -10,7 +10,7 @@ slug: halo-dunia
 id: halo-dunia
 ---
 
-Hello my friends, this is my first post on this blog. Actually I made a blog many times and in the end it didn't work, the reason was classic, because of the hectic daily activities so that I became lazy to write. My old blog can also be accessed at https://jefryd.com (**Update: the domain has been expired**), the last article there was February 19, 2017.
+Hello my friends, this is my first post on this blog. Actually I made a blog many times and in the end it didn't work, the reason was classic, because of the hectic daily activities so that I became lazy to write.
 
 ## Personal Branding
 The reason I made this blog is I want to make a new personal branding. In the future, on this blog I will fill it with personal writing and tutorial. I also want to make a special section to save writings and videos of other people's work that I think are useful. The special rubric can later be accessed through / notes for writing and / video for videos.

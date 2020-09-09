@@ -75,7 +75,7 @@ export default {
 
 <style lang="postcss">
 article {
-	@apply shadow;
+	@apply shadow-md;
 	display: flex;
 	flex-direction: column;
 	background-color: var(--card-bg);

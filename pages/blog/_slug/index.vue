@@ -1,5 +1,5 @@
 <template>
-	<div class="post">
+	<div id="blog">
 		<aside class="nav">
 			<app-header />
 		</aside>
@@ -14,6 +14,14 @@
 				<component :is="blog.component" />
 			</section>
 		</div>
+		<client-only>
+			<vue-scroll-indicator 
+				height="2px"
+				color="var(--text-normal)"
+				background="var(--bg)"
+			/>
+		</client-only>
+		<app-to-top />
 	</div>
 </template>
 
@@ -23,13 +31,15 @@ import { isExist } from '~/utils';
 import { formatDate } from '~/mixins';
 
 import AppHeader from '~/components/AppHeader';
+import AppToTop from '~/components/AppToTop';
 
 const Cookie = process.client ? require('js-cookie') : undefined;
 
 export default {
 	mixins: [formatDate],
 	component: {
-		AppHeader
+		AppHeader,
+		AppToTop
 	},
 	data() {
 		return {
@@ -102,7 +112,7 @@ export default {
 </script>
 
 <style lang="postcss">
-.post {
+#blog {
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
