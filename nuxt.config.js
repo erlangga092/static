@@ -1,7 +1,8 @@
 import {
 	build,
 	modules,
-	head
+	head,
+	pwa
 } from './config'
 
 export default {
@@ -15,6 +16,10 @@ export default {
   ** See https://nuxtjs.org/api/configuration-target
   */
   target: 'static',
+  env: {
+  	GOOGLE_ANALYTICS: 'UA-177623519-1',
+  	SENTRY_DSN: 'https://e5ed29619a0a498fb539c61a723fea99@o446152.ingest.sentry.io/5424084'
+  },
   /*
   ** Headers of the page
   ** See https://nuxtjs.org/api/configuration-head
@@ -57,5 +62,6 @@ export default {
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/
   */
+  pwa,
   build
 }
