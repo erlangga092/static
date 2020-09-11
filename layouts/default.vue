@@ -12,6 +12,13 @@ import AppHeader from '~/components/AppHeader';
 export default {
 	components: {
 		AppHeader
+	},
+	head() {
+		const i18nSeo = this.$nuxtI18nSeo();
+		return {
+			title: this.$t('description'),
+			...i18nSeo
+		}
 	}
 }
 </script>
