@@ -198,6 +198,7 @@ export default {
                 '@type': 'ListItem',
                 position: 1,
                 item: {
+                	'@id': `${HOSTNAME}${this.localePath({ name: 'blog' })}`,
                   name: 'Blog'
                 }
               },
