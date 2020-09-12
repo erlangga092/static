@@ -1,3 +1,4 @@
+require('dotenv').config();
 import { HOSTNAME } from '../constant';
 import i18n from '../locales/config';
 
