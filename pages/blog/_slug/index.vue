@@ -186,7 +186,7 @@ export default {
             },
             publisher: {
               '@type': 'Organization',
-              name: 'Jefrydco',
+              name: 'Erlangga',
               sameAs: 'https://www.facebook.com/nggacox',
               logo: {
                 '@type': 'imageObject',

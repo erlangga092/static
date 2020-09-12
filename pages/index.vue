@@ -105,7 +105,7 @@ export default {
             headline: 'A personal site of Erlangga',
             description: 'A personal site of Erlangga',
             about: 'A personal site of Erlangga',
-            keywords: 'jefrydco, Erlangga',
+            keywords: 'Erlangga',
             genre: ['Personal', 'Tutorial', 'Programming', 'Review', 'Science'],
             copyrightYear: new Date().getFullYear(),
             dateCreated: '2017-03-12',
