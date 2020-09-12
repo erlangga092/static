@@ -187,30 +187,6 @@ export default {
               name: 'Erlangga'
             }
           })
-        },
-        {
-          type: 'application/ld+json',
-          innerHTML: JSON.stringify({
-            '@context': 'http://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              {
-                '@type': 'ListItem',
-                position: 1,
-                item: {
-                	'@id': `${HOSTNAME}${this.localePath({ name: 'blog' })}`,
-                  name: 'Blog'
-                }
-              },
-              {
-                '@type': 'ListItem',
-                position: 2,
-                item: {
-                  name: this.blog && this.blog.title
-                }
-              }
-            ]
-          })
         }
       ]
     }
