@@ -1,10 +1,8 @@
-require('dotenv').config();
 import { HOSTNAME } from '../constant';
 import i18n from '../locales/config';
 
 export default [
 	'@nuxtjs/pwa',
-	'@nuxtjs/sitemap',
 	['nuxt-i18n', i18n],
 	[
 		'nuxt-responsive-loader', {

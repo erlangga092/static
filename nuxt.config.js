@@ -2,9 +2,7 @@ import {
 	build,
 	modules,
 	head,
-	pwa,
-	feed,
-	sitemap
+	pwa
 } from './config'
 
 export default {
@@ -60,8 +58,6 @@ export default {
   ** Nuxt.js modules
   */
 	modules,
-	feed,
-	sitemap,
   /*
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/

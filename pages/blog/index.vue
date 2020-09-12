@@ -1,6 +1,6 @@
 <template>
 	<div class="mt-32">
-		<h5 class="title">Durung enek konten</h5>
+		<h5 class="title">Blog</h5>
 	</div>
 </template>
 

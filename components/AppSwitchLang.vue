@@ -15,8 +15,10 @@
 <script>
 import { switchLang } from '~/mixins';
 
+const Cookie = process.client ? require('js-cookie') : undefined;
+
 export default {
-	mixins: [switchLang]
+	mixins: [switchLang],
 }
 </script>
 
