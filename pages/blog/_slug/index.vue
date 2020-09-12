@@ -1,39 +1,41 @@
 <template>
 	<div>
-	<div v-if="blog !== null && typeof blog !== 'undefined'" id="blog">
-		<div class="header">
-			<div class="header__img">
-				<app-img :src="blog.img" :alt="blog.title" />
-			</div>
+		<div class="top__navbar__article">
+			<app-header />
 		</div>
-		<div class="max-w-5xl ml-auto mr-auto wrapper">
+		<div v-if="blog !== null && typeof blog !== 'undefined'" id="blog">
+			<div class="header">
+				<div class="header__img">
+					<app-img :src="blog.img" :alt="blog.title" />
+				</div>
+			</div>
 			<div class="blog">
 				<div class="blog__content">
 					<main>
 						<article>
-							<header>
-								<div class="blog__meta">
-									<h1 id="blog-title" class="blog__title">
-										{{ blog.title }}
-									</h1>
+							<div class="blog__meta">
+								<div class="blog__meta__title">
+									<h1>{{ blog.title }}</h1>
 								</div>
-							</header>
-							<component :is="blog.component" />
+							</div>
+							<div class="blog__article">
+								<component :is="blog.component" />
+							</div>
 						</article>
 					</main>
 				</div>
 			</div>
+			<client-only>
+	      <vue-scroll-indicator
+	        height="2px"
+	        color="var(--text-normal)"
+	        background="var(--bg)"
+	      />
+	    </client-only>
+	    <app-to-top />
+	    <app-switch-lang />
 		</div>
-		<client-only>
-      <vue-scroll-indicator
-        height="2px"
-        color="var(--text-normal)"
-        background="var(--bg)"
-      />
-    </client-only>
-    <app-to-top />
 	</div>
-</div>
 </template>
 
 <script>
@@ -52,6 +54,7 @@ export default {
 	mixins: [formatDate],
 	component: {
 		AppToTop,
+		AppHeader,
 		AppSwitchLang
 	},
 	data() {
@@ -236,15 +239,31 @@ export default {
 </script>
 
 <style lang="postcss">
-#blog {
-	box-sizing: border-box;
+.top__navbar__article {
+	@apply fixed top-0 left-0 z-30 w-full;
 }
 
 .header {
 	@apply w-full relative;
-
+	
 	img {
-		@apply w-screen h-128 object-cover;
+		@apply w-screen h-128;
+	}
+}
+
+.blog {
+	@apply z-20 mx-auto relative rounded-md;
+	width: 80%;
+	display: flex;
+	justify-content: center;
+	margin-top: -16rem;
+	background-color: var(--card-bg);
+
+	&__content {
+		@apply p-12;
+		width: 80%;
+		display: flex;
+		justify-content: center;
 	}
 }
 
@@ -260,46 +279,6 @@ export default {
 
   li:before {
     content: counters(list-item, '.') ' ';
-  }
-}
-
-.blog {
-  @apply mb-12 mx-4 rounded overflow-hidden shadow relative -mt-64 z-20;
-  background-color: var(--card-bg);
-  font-family: 'merriweather sans', sans-serif;
-
-  .image-placeholder {
-    @apply mb-8;
-  }
-
-  img {
-    @apply w-full h-auto;
-  }
-
-  &__content {
-    @apply p-16;
-
-    @media screen and (max-width: 576px) {
-    	padding: 2rem;
-    }
-  }
-
-  &__meta {
-    @apply mb-8;
-  }
-
-  &__title {
-    @apply font-bold text-2xl mt-0 mb-4;
-    font-family: 'Bitter', serif;
-  }
-
-  &__date {
-    @apply leading-normal mb-4 text-base;
-  }
-
-  &__link {
-    @apply absolute top-0 left-0 w-full h-full overflow-hidden z-0;
-    text-indent: -9999px;
   }
 }
 </style>

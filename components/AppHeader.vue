@@ -88,10 +88,12 @@ export default {
 		}
 	},
 	head() {
+		const i18nSeo = this.$nuxtI18nSeo();
 		return {
 			bodyAttrs: {
 				class: this.isDark ? 'dark' : 'light'
-			}
+			},
+			...i18nSeo
 		}
 	}
 }

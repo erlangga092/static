@@ -76,8 +76,8 @@ export default {
 <style lang="postcss">
 .article__card {
 	@apply shadow-md;
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-rows: 1fr auto;
 	background-color: var(--card-bg);
 	border-radius: .375rem;
 	overflow: hidden;

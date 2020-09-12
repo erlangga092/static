@@ -1,20 +1,25 @@
 <template>
-	<div class="home">
-		<app-hero />
-		<div class="wrap px-20 mt-4">
-			<div class="article">
-			<app-article-card 
-				class="article__card"
-				v-for="blog in blogs"
-				:key="blog.id"
-				:img="blog.img"
-				:title="blog.title"
-				:summary="blog.summary"
-				:posted-date="blog.postedDate"
-				:updated-date="blog.updatedDate"
-				:readingTime="blog.readingTime"
-				:slug="blog.slug"
-			/>
+	<div>
+		<div class="top__navbar">
+			<app-header />
+		</div>
+		<div class="home">
+			<app-hero />
+			<div class="wrap px-20 mt-4">
+				<div class="article">
+				<app-article-card 
+					class="article__card"
+					v-for="blog in blogs"
+					:key="blog.id"
+					:img="blog.img"
+					:title="blog.title"
+					:summary="blog.summary"
+					:posted-date="blog.postedDate"
+					:updated-date="blog.updatedDate"
+					:readingTime="blog.readingTime"
+					:slug="blog.slug"
+				/>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -189,7 +194,7 @@ export default {
 </script>
 
 <style lang="postcss">
-.top_navbar {
+.top__navbar {
 	@apply fixed top-0 left-0 z-20 w-full;
 }
 
