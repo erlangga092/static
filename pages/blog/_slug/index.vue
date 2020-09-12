@@ -1,31 +1,39 @@
 <template>
-	<div id="blog">
-		<aside class="nav">
-			<app-header />
-		</aside>
-		<div v-if="blog !== null && typeof blog !== 'undefined'" class="blog">
-			<section class="img">
-				<app-img :src="blog.img" alt="title" />
-			</section>
-			<section class="blog__wrap">
-				<div class="blog__wrap__meta">
-					<h1 class="text-2xl">{{ blog.title }}</h1>
+	<div>
+	<div v-if="blog !== null && typeof blog !== 'undefined'" id="blog">
+		<div class="header">
+			<div class="header__img">
+				<app-img :src="blog.img" :alt="blog.title" />
+			</div>
+		</div>
+		<div class="max-w-5xl ml-auto mr-auto wrapper">
+			<div class="blog">
+				<div class="blog__content">
+					<main>
+						<article>
+							<header>
+								<div class="blog__meta">
+									<h1 id="blog-title" class="blog__title">
+										{{ blog.title }}
+									</h1>
+								</div>
+							</header>
+							<component :is="blog.component" />
+						</article>
+					</main>
 				</div>
-				<component :is="blog.component" />
-			</section>
+			</div>
 		</div>
 		<client-only>
-			<vue-scroll-indicator 
-				height="2px"
-				color="var(--text-normal)"
-				background="var(--bg)"
-			/>
-		</client-only>
-		<app-to-top />
-		<div class="switch__lang__slug">
-			<app-switch-lang />
-		</div>
+      <vue-scroll-indicator
+        height="2px"
+        color="var(--text-normal)"
+        background="var(--bg)"
+      />
+    </client-only>
+    <app-to-top />
 	</div>
+</div>
 </template>
 
 <script>
@@ -43,7 +51,6 @@ const Cookie = process.client ? require('js-cookie') : undefined;
 export default {
 	mixins: [formatDate],
 	component: {
-		AppHeader,
 		AppToTop,
 		AppSwitchLang
 	},
@@ -79,39 +86,14 @@ export default {
 		}
 	},
 	mounted() {
-		this.initColorScheme();
 		const hash = window.location.hash;
 		if (hash) {
 			const element = document.querySelector(hash);
 			element.toScrollIntoView({ behavior: 'smooth' });
 		}
 	},
-	methods: {
-		initColorScheme() {
-			const isDark = Cookie.get('d');
-			if (isDark) {
-				if (parseInt(isDark)) {
-					this.isDark = true;
-				}
-			} else if (
-				window.matchMedia('(prefers-color-scheme)').media !== 'not all'
-			) {
-				const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-				if (darkModeMediaQuery.matches) {
-					this.isDark = true;
-				}
-				darkModeMediaQuery.addListener(e => {
-					const darkModeOn = e.matches;
-					this.isDark = darkModeOn;
-				})
-			}
-		}
-	},
 	head() {
     return {
-    	bodyAttrs: {
-    		class: this.isDark ? 'dark' : 'light'
-    	},
       title: this.blog && this.blog.title,
       meta: [
         {
@@ -255,90 +237,69 @@ export default {
 
 <style lang="postcss">
 #blog {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	width: 100%;
+	box-sizing: border-box;
+}
 
-	.nav {
-		@apply z-30;
-		width: 100%;
-		position: fixed;
-		top: 0;
-		left: 0;
+.header {
+	@apply w-full relative;
+
+	img {
+		@apply w-screen h-128 object-cover;
 	}
+}
 
-	.blog {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		font-family: 'Merriweather sans', sans-serif;
+.table-of-contents {
+  ol {
+    counter-reset: list-item;
+  }
 
-		> .img {
-			@apply w-screen overflow-hidden;
-			margin-top: -5rem;
-			height: 42rem;
-			border-bottom: transparent;
+  li {
+    @apply block;
+    counter-increment: list-item;
+  }
 
-			@media screen and (max-width: 576px) {
-				margin-top: 3rem;
-			}
+  li:before {
+    content: counters(list-item, '.') ' ';
+  }
+}
 
-			> img {
-				@apply w-screen object-cover;
-			}
-		}
+.blog {
+  @apply mb-12 mx-4 rounded overflow-hidden shadow relative -mt-64 z-20;
+  background-color: var(--card-bg);
+  font-family: 'merriweather sans', sans-serif;
 
-		&__wrap {
-			@apply mb-12 px-16 rounded-md overflow-hidden shadow-xl z-10;
-			background-color: var(--card-bg);
-			width: 75%;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			margin-top: -17rem;
+  .image-placeholder {
+    @apply mb-8;
+  }
 
-			@media screen and (max-width: 992px) {
-				width: 85%;
-				margin-top: -21rem;
-			}
+  img {
+    @apply w-full h-auto;
+  }
 
-			@media screen and (max-width: 768px) {
-				width: 90%;
-				margin-top: -24rem;
-				padding-right: 2.75rem;
-				padding-left: 2.75rem;
-			}
+  &__content {
+    @apply p-16;
 
-			@media screen and (max-width: 576px) {
-				margin-top: -31.5rem;
-				padding-right: 2.5rem;
-				padding-left: 2.5rem;
-			}
+    @media screen and (max-width: 576px) {
+    	padding: 2rem;
+    }
+  }
 
-			&__meta {
-				width: 100%;
-				
-				> h1 {
-					font-family: 'Bitter', serif;
-				}
-			}
+  &__meta {
+    @apply mb-8;
+  }
 
-			> h1, h2, h3, h4, h5, h6 {
-				font-family: 'Bitter', serif;
-			}
-		}
-	}
+  &__title {
+    @apply font-bold text-2xl mt-0 mb-4;
+    font-family: 'Bitter', serif;
+  }
 
-	> .switch__lang__slug {
-		display: none;
+  &__date {
+    @apply leading-normal mb-4 text-base;
+  }
 
-		@media screen and (max-width: 976px) {
-			display: block;
-		}
-	}
+  &__link {
+    @apply absolute top-0 left-0 w-full h-full overflow-hidden z-0;
+    text-indent: -9999px;
+  }
 }
 </style>

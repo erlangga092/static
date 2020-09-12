@@ -1,6 +1,5 @@
 <template>
 	<div class="home">
-		<app-header />
 		<app-hero />
 		<div class="wrap px-20 mt-4">
 			<div class="article">
@@ -69,9 +68,9 @@ export default {
     const link = locales.map((locale) => {
       let href = null
       if (locale.code === 'id') {
-        href = `${HOSTNAME}/blog.xml`
+        href = `${HOSTNAME}/sitemap.xml`
       } else {
-        href = `${HOSTNAME}/${locale.code}/blog.xml`
+        href = `${HOSTNAME}/${locale.code}/sitemap.xml`
       }
       return {
         rel: 'alternate',
@@ -190,6 +189,10 @@ export default {
 </script>
 
 <style lang="postcss">
+.top_navbar {
+	@apply fixed top-0 left-0 z-20 w-full;
+}
+
 .home {
 	margin-top: 4.2rem;
 }

@@ -1,5 +1,5 @@
 <template>
-	<article>
+	<article class="article__card">
 		<section class="meta px-8 pt-4">
 			<div class="meta__title">
 				<h1 class="meta__title__teks my-4 text-xl">
@@ -74,7 +74,7 @@ export default {
 </script>
 
 <style lang="postcss">
-article {
+.article__card {
 	@apply shadow-md;
 	display: flex;
 	flex-direction: column;

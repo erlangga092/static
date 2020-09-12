@@ -1,5 +1,4 @@
 <template>
-	<div>
 	<header class="header">
 		<div class="header__navbar">
 			<section class="header__navbar__logo">
@@ -40,7 +39,6 @@
 			</aside>
 		</div>
 	</header>
-	</div>
 </template>
 
 <script>
