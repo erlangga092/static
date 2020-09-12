@@ -9,27 +9,32 @@
 
 <url>
   <loc>https://erlangga.now.sh/</loc>
-  <lastmod>2020-09-07T16:59:49+00:00</lastmod>
+  <lastmod>2020-09-12T17:03:02+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://erlangga.now.sh/blog</loc>
-  <lastmod>2020-09-07T16:59:49+00:00</lastmod>
+  <loc>https://erlangga.now.sh/en</loc>
+  <lastmod>2020-09-12T17:03:02+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://erlangga.now.sh/en</loc>
-  <lastmod>2020-09-07T16:59:49+00:00</lastmod>
+  <loc>https://erlangga.now.sh/blog/seri-optimasi-website</loc>
+  <lastmod>2020-09-12T17:03:02+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://erlangga.now.sh/blog/halo-dunia</loc>
-  <lastmod>2020-09-07T16:59:49+00:00</lastmod>
+  <lastmod>2020-09-12T17:03:02+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://erlangga.now.sh/en/blog/seri-optimasi-website</loc>
+  <lastmod>2020-09-12T17:03:02+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://erlangga.now.sh/en/blog/halo-dunia</loc>
-  <lastmod>2020-09-07T16:59:49+00:00</lastmod>
+  <lastmod>2020-09-12T17:03:02+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
