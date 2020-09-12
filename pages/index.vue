@@ -27,6 +27,7 @@ import AppHeader from '~/components/AppHeader';
 import AppArticleCard from '~/components/AppArticleCard';
 import slugs from '~/contents/blogs';
 import readingTime from 'reading-time';
+import { HOSTNAME } from '~/constant';
 
 export default {
 	components: {
@@ -62,7 +63,13 @@ export default {
 		return {
 			blogs: []
 		}
-	}
+	},
+	head() {
+    const { locales } = this.$i18n
+    return {
+      title: 'Blog',
+    }
+  }
 }
 </script>
 

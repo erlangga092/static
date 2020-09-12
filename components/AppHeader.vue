@@ -19,9 +19,6 @@
 							<nuxt-link to="/">Home</nuxt-link>
 						</li>
 						<li class="mx-0 my-0 mr-4">
-							<nuxt-link to="/blog">Blog</nuxt-link>
-						</li>
-						<li class="mx-0 my-0 mr-4">
 							<nuxt-link 
 								v-for="locale in availableLocales"
 								:key="locale.id"
