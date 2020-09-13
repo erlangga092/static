@@ -3,7 +3,7 @@ import { HOSTNAME } from '../constant'
 export default {
   // https://pwa.nuxtjs.org/modules/meta.html
   meta: {
-    name: 'Erlangga',
+    name: 'ERL_Angga',
     description: 'A personal site of Erlangga',
     lang: 'id',
     ogHost: `${HOSTNAME}`,
@@ -14,8 +14,8 @@ export default {
 
   // https://pwa.nuxtjs.org/modules/manifest.html
   manifest: {
-    name: 'Erlangga',
-    short_name: 'Erlangga',
+    name: 'ERL_Angga',
+    short_name: 'ERL_Angga',
     start_url: '/?utm_source=homescreen',
     description: 'A personal site of Erlangga',
     lang: 'id',
@@ -37,14 +37,6 @@ export default {
       },
       {
         urlPattern: 'https://fonts.gstatic.com/.*',
-        handler: 'staleWhileRevalidate'
-      },
-      {
-        urlPattern: 'https://cdn.ampproject.org/.*',
-        handler: 'staleWhileRevalidate'
-      },
-      {
-        urlPattern: 'https://firestore.googleapis.com/.*',
         handler: 'staleWhileRevalidate'
       },
       {

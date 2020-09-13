@@ -55,7 +55,7 @@ export default {
     {
       type: 'text/plain',
       rel: 'author',
-      href: `${HOSTNAME}/robots.txt`
+      href: `${HOSTNAME}/humans.txt`
     },
     {
       rel: 'dns-prefetch',
