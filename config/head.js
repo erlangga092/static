@@ -70,16 +70,14 @@ export default {
       href: 'https://www.google-analytics.com'
     }
   ],
-  script: [
-    {
-      'data-ad-client': "ca-pub-3415002585903549",
-      async:true,
-      src:"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-    }
-  ],
   // Taken from: https://github.com/manniL/lichter.io/blob/master/config/head.js
   __dangerouslyDisableSanitizers: ['script'],
   script: [
+  	{
+      'data-ad-client': "ca-pub-3415002585903549",
+      async:true,
+      src:"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    },
     {
       type: 'application/ld+json',
       innerHTML: JSON.stringify({
