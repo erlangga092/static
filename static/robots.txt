@@ -1,2 +1,3 @@
 User-agent: *
-Sitemap: https://erlangga.now.sh/sitemap.xml
+Disallow: 
+Sitemap: https://ruang-manfaat.now.sh/sitemap.xml
