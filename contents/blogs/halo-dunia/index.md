@@ -12,6 +12,8 @@ id: halo-dunia
 
 Halo teman-teman, ini adalah pos pertama saya di blog ini. Sebenarnya saya udah berkali-kali bikin blog dan ujung-ujungnya jadi ga keurus, alasannya klasik, karena kesibukan sehari-hari yang semakin padat sehingga saya jadi malas untuk menulis.
 
+[toc]
+
 ## Personal Branding
 Alasan saya bikin blog ini adalah saya pengen bikin personal branding baru. Kedepannya di blog ini akan saya isi dengan tulisan pribadi dan tutorial. saya juga pengen bikin rubrik khusus buat nyimpen tulisan dan video karya orang lain yang menurut saya bermanfaat. Rubrik khusus tersebut nantinya bisa diakses melalui /notes untuk tulisan dan /video untuk video.
 

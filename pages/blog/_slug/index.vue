@@ -233,7 +233,7 @@ export default {
 		}
 
 		&__wrap {
-			@apply mb-12 px-16 rounded-md overflow-hidden shadow-xl z-10;
+			@apply mb-12 px-16 pb-16 rounded-md overflow-hidden shadow-xl z-10;
 			background-color: var(--card-bg);
 			width: 75%;
 			display: flex;
@@ -256,8 +256,8 @@ export default {
 
 			@media screen and (max-width: 576px) {
 				margin-top: -31.5rem;
-				padding-right: 2.5rem;
-				padding-left: 2.5rem;
+				padding-right: 2rem;
+				padding-left: 2rem;
 			}
 
 			&__meta {
@@ -265,6 +265,9 @@ export default {
 				
 				> h1 {
 					font-family: 'Bitter', serif;
+					@media screen and (max-width: 576px) {
+						margin-top: 2rem;
+					}
 				}
 			}
 
@@ -279,6 +282,60 @@ export default {
 
 		@media screen and (max-width: 976px) {
 			display: block;
+		}
+	}
+}
+
+.dynamic-markdown {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+table {
+	border: 1px solid var(--text-disabled);
+	> thead {
+		display: table-header-group;
+		vertical-align: middle;
+		border-color: inherit;
+		> tr > th {
+			padding: .8rem;
+			border: 1px solid var(--text-disabled);
+		}
+	}
+	tbody {
+		display: table-row-group;
+		vertical-align: middle;
+		border-color: inherit;
+		> tr > td {
+			padding: .8rem;
+			border: 1px solid var(--text-disabled);
+		}
+	}
+}
+
+.table__account {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 2rem;
+	@media screen and (max-width: 978px) {
+		grid-template-columns: 1fr;
+		grid-gap: 2rem;
+	}
+	.table-1,
+	.table-2 {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		table {
+			width: 100%;
+		}
+	}
+}
+
+.table__rumus {
+	table {
+		@media screen and (max-width: 576px) {
+			font-size: .95rem;
 		}
 	}
 }

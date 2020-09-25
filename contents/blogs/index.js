@@ -1,4 +1,4 @@
 export default [
-	'seri-optimasi-website',
+	'akuntansi-dasar',
   'halo-dunia'
 ]
