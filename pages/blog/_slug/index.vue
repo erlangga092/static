@@ -258,6 +258,7 @@ export default {
 				margin-top: -31.5rem;
 				padding-right: 2rem;
 				padding-left: 2rem;
+				width: 80%;
 			}
 
 			&__meta {
@@ -337,6 +338,12 @@ table {
 		@media screen and (max-width: 576px) {
 			font-size: .95rem;
 		}
+	}
+}
+
+.table__ledger {
+	@media screen and (max-width: 992px) {
+		grid-template-columns: 1fr !important;
 	}
 }
 </style>

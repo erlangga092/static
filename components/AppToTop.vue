@@ -7,7 +7,8 @@
 <style lang="postcss">
 /* purgecss start ignore */
 .to-top {
-  @apply fixed z-20;
+  position: fixed;
+  z-index: 20;
   bottom: 1.4rem;
   right: 1.9rem;
 
@@ -17,7 +18,8 @@
   }
 
   &__link {
-    @apply block w-12 h-12 rounded-full shadow-md no-underline text-center text-2xl;
+    @apply w-12 h-12 rounded-full shadow-md no-underline text-center text-2xl;
+    display: block;
     line-height: 1.8;
     background-color: var(--card-bg);
     color: var(--text-normal);
