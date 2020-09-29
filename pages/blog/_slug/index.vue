@@ -29,8 +29,9 @@
 </template>
 
 <script>
+import Vue from 'vue';
 import readingTime from 'reading-time';
-import { isExist } from '~/utils';
+import { isExists } from '~/utils';
 import { formatDate } from '~/mixins';
 
 import AppHeader from '~/components/AppHeader';
@@ -62,6 +63,21 @@ export default {
 				blog = require(`~/contents/blogs/${slug}/index.md`);
 			} else {
 				blog = require(`~/contents/blogs/${slug}/index.${locale}.md`);
+			}
+
+			if (isExists(blog)) {		
+				if (
+					isExists(blog.attributes.extraComponents) &&
+					Array.isArray(blog.attributes.extraComponents) &&
+					blog.attributes.extraComponents.length > 0
+				) {
+					blog.attributes.extraComponents.forEach((component) => {
+						Vue.component(
+							component,
+							require(`~/components/contents/blogs/${blog.attributes.slug}/${component}`).default
+						)
+					})
+				}
 			}
 
 			this.blog = {
@@ -241,6 +257,8 @@ export default {
 			align-items: center;
 			justify-content: center;
 			margin-top: -17rem;
+			box-sizing: border-box;
+			position: relative;
 
 			@media screen and (max-width: 992px) {
 				width: 85%;
@@ -258,7 +276,8 @@ export default {
 				margin-top: -31.5rem;
 				padding-right: 2rem;
 				padding-left: 2rem;
-				width: 80%;
+				width: 90%;
+				box-sizing: border-box;
 			}
 
 			&__meta {
@@ -294,11 +313,14 @@ export default {
 
 table {
 	border: 1px solid var(--text-disabled);
+	box-sizing: border-box;
 	> thead {
 		display: table-header-group;
 		vertical-align: middle;
 		border-color: inherit;
+		box-sizing: border-box;
 		> tr > th {
+			box-sizing: border-box;
 			padding: .8rem;
 			border: 1px solid var(--text-disabled);
 		}
@@ -307,8 +329,10 @@ table {
 		display: table-row-group;
 		vertical-align: middle;
 		border-color: inherit;
+		box-sizing: border-box;
 		> tr > td {
-			padding: .8rem;
+			box-sizing: border-box;
+			padding: .75rem;
 			border: 1px solid var(--text-disabled);
 		}
 	}
@@ -344,6 +368,7 @@ table {
 .table__ledger {
 	@media screen and (max-width: 992px) {
 		grid-template-columns: 1fr !important;
+		box-sizing: border-box;
 	}
 }
 </style>
