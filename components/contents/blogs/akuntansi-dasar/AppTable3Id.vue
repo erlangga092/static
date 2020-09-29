@@ -1,6 +1,6 @@
 <template>
 	<div class="table__jurnal__1" style="width: 100%; margin-bottom: 1.75rem; overflow-x: scroll; box-sizing: border-box;">
-		<table>
+		<table style="table-layout: fixed;">
 			<tbody>
 				<tr>
 					<td rowspan="2" style="background-color: var(--bg);">1 Sept.</td>
@@ -21,3 +21,11 @@ export default {
 	extends: AppTableBase
 }
 </script>
+
+<style lang="postcss">
+.table__jurnal__1 {
+	table {
+		table-layout: fixed;
+	}
+}
+</style>

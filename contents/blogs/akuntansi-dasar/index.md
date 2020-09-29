@@ -25,16 +25,27 @@ Istilah [Debet](https://id.wikipedia.org/wiki/Debit) dan [Kredit](https://id.wik
 
 Berikut merupakan terminologi dasar dari debet dan kredit.
 
-<app-table-1-id />
+<!-- <app-table-1-id /> -->
 
 ## Persamaan Dasar Akuntansi
 Dalam sistem berpasangan, untuk setiap debet harus ada kredit dan begitu juga sebaliknya, sehingga ketika anda membandingkan antara sisi debet dan sisi kredit dalam laporan akuntansi maka akan seimbang (_balance_), sehingga akan diperoleh rumus persamaan dasar sebagai berikut.
+
+```javascript
+const toggleModal = document.querySelector('.toggle');
+toggleModal.addEventListener('click', () => {
+	if (nama !=== 'null') {
+		Vue.component(component, {
+			require(`contents/blogs/${slug}/component`);
+		})
+	}
+})
+```
 
 <app-table-2-id />
 
 Kemudian untuk memudahkan anda nantinya dalam membuat laporan keuangan, maka berikut merupakan siklus akuntansi dari awal adanya transaksi sampai pada pembuatan laporan keuangan.
 
-<app-img src="/content/2020/09/akuntansi-dasar/siklus-akuntansi.jpg" alt="siklus akuntansi" />
+<!-- <app-img src="/content/2020/09/akuntansi-dasar/siklus-akuntansi.jpg" alt="siklus akuntansi" /> -->
 
 ## Pembuatan Jurnal
 Sekarang coba kita buat contoh sederhana pembuatan jurnal yang kita ilustrasikan bahwa terdapat transaksi yang dilakukan PT Color Ceria sebagai berikut.

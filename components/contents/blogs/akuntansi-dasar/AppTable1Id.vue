@@ -1,7 +1,7 @@
 <template>
 	<div class="table__account" style="width: 100%; box-sizing: border-box; overflow-x: scroll;">
 		<div class="table-1" style="width: 100%; box-sizing: border-box; overflow-x: scroll;">
-			<table>
+			<table style="table-layout: fixed;">
 				<thead>
 					<tr>
 						<th colspan="2" style="background-color: var(--bg)">Saldo Normal - Debet <br>Akun Aktiva</th>
@@ -73,3 +73,24 @@ export default {
 	extends: AppTableBase
 }
 </script>
+
+<style lang="postcss">
+.table__account {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 2rem;
+	@media screen and (max-width: 978px) {
+		grid-template-columns: 1fr;
+		grid-gap: 2rem;
+	}
+	.table-1,
+	.table-2 {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		table {
+			width: 100%;
+		}
+	}
+}
+</style>

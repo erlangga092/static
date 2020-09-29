@@ -1,6 +1,6 @@
 <template>
-	<div class="table__rumus" style="width: 100%; display: flex; justify-content: center; margin-bottom: 1.75rem; box-sizing: border-box; overflow-x: scroll;">
-		<table style="width: 100%;">
+	<div class="table__rumus" style="margin-bottom: 1.75rem; box-sizing: border-box; overflow-x: auto;">
+		<table>
 			<thead>
 				<tr>
 					<th>Aktiva <br>(Assets)</th>
@@ -21,3 +21,16 @@ export default {
 	extends: AppTableBase
 }
 </script>
+
+<style lang="postcss">
+.table__rumus {
+	table {
+		width: 100%;
+		table-layout: fixed;
+		overflow-x: auto;
+		@media screen and (max-width: 768px) {
+			width: 190%;
+		}
+	}
+}
+</style>

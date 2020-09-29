@@ -226,19 +226,19 @@ export default {
 	}
 
 	.blog {
-		width: 100%;
+		@apply w-screen;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		font-family: 'Merriweather sans', sans-serif;
+		box-sizing: border-box;
 
 		> .img {
 			@apply w-screen overflow-hidden;
 			margin-top: -5rem;
 			height: 42rem;
 			border-bottom: transparent;
-
 			@media screen and (max-width: 576px) {
 				margin-top: 3rem;
 			}
@@ -253,12 +253,12 @@ export default {
 			background-color: var(--card-bg);
 			width: 75%;
 			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
 			margin-top: -17rem;
-			box-sizing: border-box;
 			position: relative;
+			align-items: center;
+			flex-direction: column;
+			box-sizing: border-box;
+			justify-content: center;
 
 			@media screen and (max-width: 992px) {
 				width: 85%;
@@ -268,21 +268,20 @@ export default {
 			@media screen and (max-width: 768px) {
 				width: 90%;
 				margin-top: -24rem;
-				padding-right: 2.75rem;
 				padding-left: 2.75rem;
+				padding-right: 2.75rem;
 			}
 
 			@media screen and (max-width: 576px) {
-				margin-top: -31.5rem;
-				padding-right: 2rem;
-				padding-left: 2rem;
 				width: 90%;
-				box-sizing: border-box;
+				/* width: 370px; */
+				padding-left: 2rem;
+				padding-right: 2rem;
+				margin-top: -31.5rem;
 			}
 
 			&__meta {
 				width: 100%;
-				
 				> h1 {
 					font-family: 'Bitter', serif;
 					@media screen and (max-width: 576px) {
@@ -306,69 +305,61 @@ export default {
 	}
 }
 
+.table-of-contents {
+  ol {
+    counter-reset: list-item;
+  }
+
+  li {
+    @apply block;
+    counter-increment: list-item;
+  }
+
+  li:before {
+    content: counters(list-item, '.') ' ';
+  }
+}
+
 .dynamic-markdown {
 	width: 100%;
 	box-sizing: border-box;
+	> pre {
+		width: 100%;
+		position: relative;
+		overflow-x: auto;
+		> code {
+			width: 100%;
+		}
+	}
+
+	a {
+	  @apply underline;
+	  color: var(--text-link);
+
+	  &:hover {
+	    @apply no-underline;
+	  }
+	}
 }
 
 table {
 	border: 1px solid var(--text-disabled);
 	box-sizing: border-box;
 	> thead {
-		display: table-header-group;
 		vertical-align: middle;
 		border-color: inherit;
-		box-sizing: border-box;
 		> tr > th {
-			box-sizing: border-box;
-			padding: .8rem;
-			border: 1px solid var(--text-disabled);
-		}
-	}
-	tbody {
-		display: table-row-group;
-		vertical-align: middle;
-		border-color: inherit;
-		box-sizing: border-box;
-		> tr > td {
-			box-sizing: border-box;
 			padding: .75rem;
 			border: 1px solid var(--text-disabled);
 		}
 	}
-}
-
-.table__account {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-gap: 2rem;
-	@media screen and (max-width: 978px) {
-		grid-template-columns: 1fr;
-		grid-gap: 2rem;
-	}
-	.table-1,
-	.table-2 {
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		table {
-			width: 100%;
+	tbody {
+		vertical-align: middle;
+		border-color: inherit;
+		> tr > td {
+			padding: .75rem;
+			border: 1px solid var(--text-disabled);
 		}
-	}
-}
-
-.table__rumus {
-	table {
-		@media screen and (max-width: 576px) {
-			font-size: .95rem;
-		}
-	}
-}
-
-.table__ledger {
-	@media screen and (max-width: 992px) {
-		grid-template-columns: 1fr !important;
-		box-sizing: border-box;
 	}
 }
 </style>
