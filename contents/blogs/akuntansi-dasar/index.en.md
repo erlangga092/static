@@ -1,588 +1,176 @@
 ---
-title: Akuntansi Dasar
-description: Belajar akuntansi dasar dan pengaplikasiannya pada jurnal.
-summary: Melalui seri ini saya ingin mengajak para pembaca untuk belajar bersama terkait akuntansi dasar serta pengaplikasiaanya dengan mempraktekan dalam membuat jurnal sederhana.
+title: Accounting Basic
+description: Learn basic accounting and its application to journals.
+summary: Through this series I would like to invite readers to learn together about basic accounting and its application by practicing simple journal keeping.
 img: /cover/2017/08/seri-optimasi-website-image-by-spacex.jpg
 imgCreator: spacex
 postedDate: 2020-09-25T04:14:03.000Z
 updatedDate: 2020-09-25T04:14:03.000Z
 slug: akuntansi-dasar
 id: akuntasi-dasar
+extraComponents: ['AppTable1Id', 'AppTable3Id', 'AppTable4Id', 'AppTable5Id', 'AppTable6Id', 'AppTable7Id', 'AppTable8Id', 'AppTable9Id', 'AppTable10Id', 'AppTable11Id', 'AppTable12Id', 'AppTable13Id', 'AppTable14Id', 'AppTable15Id', 'AppTable16Id', 'AppTable17Id', 'AppTable18Id', 'AppTable19Id', 'AppTable20Id', 'AppTable21Id', 'AppTable22Id']
 ---
 
-Halo pembaca, pada seri ini saya ingin mengajak anda untuk belajar bersama tentang akuntansi dasar. Pasti banyak dari anda yang mempunyai ketertarikan terhadap disiplin ilmu ini. Pasalnya, seorang akuntan selalu dibutuhkan oleh semua perusahaan, baik perusahaan dagang, jasa maupun manufaktur. 
+Hello readers, in this series I would like to invite you to learn together about basic accounting. Surely many of you have an interest in this discipline. The reason is, an accountant is always needed by all companies, both trading, service and manufacturing companies.
 
-_Jobdesk_ seorang akuntan dalam perusahaan adalah memastikan semua alur pergerakan keuangan dicatat secara fisik ke dalam sebuah laporan keuangan, yang nantinya akan disajikan kepada para pemangku kepentingan untuk pengambilan keputusan selanjutnya. 
+Accountant's jobdesk in the company is to ensure that all the flow of financial movements is recorded physically into a financial report, which will later be presented to stakeholders for further decision making.
 
 [toc]
 
-## Mengenal Akuntansi
-Berbagai sumber menjelaskan mengenai apa itu akuntansi, seperti [American Accounting Association](https://aaahq.org/) yang mendefinisikan akuntansi sebagai proses pengidentifikasian, pengukuran dan pelaporan informasi ekonomi untuk memungkinkan adanya penilaian dan pengambilan keputusan yang jelas dan tegas bagi mereka yang menggunakan informasi tersebut. 
+## Knowing Accounting
+Various sources explain what accounting is, such [American Accounting Association](https://aaahq.org/) which defines accounting as the process of identifying, measuring and reporting economic information to enable clear and assertive judgment and decision-making for those who use that information. 
 
-## Terminologi Dasar Debet dan Kredit
-Istilah [Debet](https://id.wikipedia.org/wiki/Debit) dan [Kredit](https://id.wikipedia.org/wiki/Kredit_(akuntansi)) pasti anda jumpai ketika belajar akuntansi, dan perlu diingat bahwa kedua istilah ini bukan berarti _peningkatan_ ataupun _penurunan_ tetapi untuk menggambarkan dimana ayat jurnal dibuat. Sisi kiri berarti men-debet akun, sedangkan sisi kanan berarti meng-kredit akun. Sebuah akun dapat dikatakan memiliki _saldo debet_ jika jumlah debet melampaui jumlah kredit, begitu pun sebaliknya.
+## Basic Terminology of Debit and Credit
+The terms [Debit](https://id.wikipedia.org/wiki/Debit) and [Kredit](https://id.wikipedia.org/wiki/Kredit_(akuntansi)) must be encountered when studying accounting, and keep in mind that these two terms do not mean an `increase` or `decrease` but to describe where journal entries are made. The left side means debiting the account, while the right side means crediting the account. An account can be said to have a `debit balance` if the debit amount exceeds the credit amount, and vice versa.
 
-Berikut merupakan terminologi dasar dari debet dan kredit.
+The following is the basic terminology of debit and credit.
 
-<div class="table__account" style="width: 100%; box-sizing: border-box; overflow-x: scroll;">
-	<div class="table-1" style="width: 100%; box-sizing: border-box; overflow-x: scroll;">
-		<table>
-			<thead>
-				<tr>
-					<th colspan="2" style="background-color: var(--bg)">Saldo Normal - Debet <br>Akun Aktiva</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Debet <br>+ (Peningkatan)</td>
-					<td>Kredit <br>+ (Penurunan)</td>
-				</tr>
-			</tbody>
-			<thead>
-				<tr>
-					<th colspan="2" style="background-color: var(--bg)">Akun Beban</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Debet <br>+ (Peningkatan)</td>
-					<td>Kredit <br>+ (Penurunan)</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-	<div class="table-2" style="width: 100%; box-sizing: border-box; overflow-x: scroll;">
-		<table>
-			<thead>
-				<tr>
-					<th colspan="2" style="background-color: var(--bg)">Saldo Normal - Kredit <br>Akun Kewajiban</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Debet <br>+ (Penurunan)</td>
-					<td>Kredit <br>+ (Peningkatan)</td>
-				</tr>
-			</tbody>
-			<thead>
-				<tr>
-					<th colspan="2" style="background-color: var(--bg)">Akun Ekuitas</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Debet <br>+ (Penurunan)</td>
-					<td>Kredit <br>+ (Peningkatan)</td>
-				</tr>
-			</tbody>
-			<thead>
-				<tr>
-					<th colspan="2" style="background-color: var(--bg)">Akun Pendapatan</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Debet <br>+ (Penurunan)</td>
-					<td>Kredit <br>+ (Peningkatan)</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-</div>
+<app-table-1-id />
 
-## Persamaan Dasar Akuntansi
-Dalam sistem berpasangan, untuk setiap debet harus ada kredit dan begitu juga sebaliknya, sehingga ketika anda membandingkan antara sisi debet dan sisi kredit dalam laporan akuntansi maka akan seimbang (_balance_), sehingga akan diperoleh rumus persamaan dasar sebagai berikut.
+## Basic Accounting Equations
+In a paired system, for each debit there must be a credit and vice versa, so that when you compare the debit and credit side of the accounting report it will be balanced, so the basic equation formula will be obtained as follows.
 
-<div class="table__rumus" style="width: 100%; display: flex; justify-content: center; margin-bottom: 1.75rem; box-sizing: border-box; overflow-x: scroll;">
-	<table style="width: 100%;">
-		<thead>
-			<tr>
-				<th>Aktiva <br>(Assets)</th>
-				<th>=</th>
-				<th>Kewajiban <br>(Liabilitas)</th>
-				<th>+</th>
-				<th>Ekuitas Pemegang Saham <br>(Stockholders Equity)</th>
-			</tr>
-		</thead>
-	</table>
-</div>
+```javascript
+Assets = Liability + Stockholders Equity
+```
 
-Kemudian untuk memudahkan anda nantinya dalam membuat laporan keuangan, maka berikut merupakan siklus akuntansi dari awal adanya transaksi sampai pada pembuatan laporan keuangan.
+Then to make it easier for you later in making financial reports, the following is the accounting cycle from the beginning of the transaction to the making of financial reports.
 
-<app-img src="/content/2020/09/akuntansi-dasar/siklus-akuntansi.jpg" alt="siklus akuntansi" />
+<!-- <app-img src="/content/2020/09/akuntansi-dasar/siklus-akuntansi.jpg" alt="siklus akuntansi" /> -->
 
-## Pembuatan Jurnal
-Sekarang coba kita buat contoh sederhana pembuatan jurnal yang kita ilustrasikan bahwa terdapat transaksi yang dilakukan PT Color Ceria sebagai berikut.
+## Making Journal
+Now let's make a simple example of making a journal which we illustrate that PT Color Ceria has conducted transactions as follows.
 
-<div class="table__jurnal__1" style="width: 100%; margin-bottom: 1.75rem; overflow-x: scroll; box-sizing: border-box; width: 100%;">
-	<table>
-		<tbody>
-			<tr>
-				<td rowspan="2" style="background-color: var(--bg);">1 September</td>
-				<td>Pemegang saham menginvestasikan kas sebesar Rp.500.000 dalam perusahaan yang ditukar dengan lembar saham</td>
-			</tr>
-			<tr>
-				<td>Membeli peralatan kantor seharga Rp.100.000 secara tunai</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+<app-table-3-id />
 
-berikut merupakan jurnal untuk transaksi di atas.
+The following is the journal entry for the above transaction.
 
-<div class="table__jurnal__umum__1" style="width: 100%; overflow-x: scroll; box-sizing: border-box;">
-	<table width="100%" style="overflow-x: scroll; box-sizing: border-box;">
-		<thead>
-			<tr>
-				<th colspan="5" style="background-color: var(--bg);">Jurnal Umum</th>
-			</tr>
-			<tr>
-				<th>Tanggal</th>
-				<th width="350">Judul Akun dan Keterangan</th>
-				<th>Ref</th>
-				<th>Debet</th>
-				<th>Kredit</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>2020 Sept. <span style="float: right;">1</span></td>
-				<td>Kas <br> &nbsp; Saham Biasa <br> &nbsp; (Menerbitkan saham) </td>
-				<td></td>
-				<td style="vertical-align: top;">500.000 <br> &nbsp; <br> &nbsp; </td>
-				<td style="vertical-align: top;">&nbsp; <br> 500.000 <br> &nbsp; </td>
-			</tr>
-			<tr>
-				<td><span style="float: right;">1</span></td>
-				<td>Peralatan Kantor <br> &nbsp; Kas <br> &nbsp; (Membeli peralatan tunai) </td>
-				<td></td>
-				<td style="vertical-align: top;">100.000 <br> &nbsp; <br> &nbsp; </td>
-				<td style="vertical-align: top;">&nbsp; <br> 100.000 <br> &nbsp; </td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+<app-table-4-id />
 
-## Pemindahbukuan (Posting)
-Berikut merupakan prosedur pemindahbukuan (posting) dari ayat jurnal ke dalam buku besar (_Ledger_).
-1. Dalam buku besar, catatlah tanggal, halaman jurnal, dan jumlah debet yang tertera ke kolom yang tepat untuk akun yang di-debet.
-2. Pada kolom Ref. jurnal, tulislah nomor akun atas jumlah debet yang diposting.
-3. Dalam buku besar, catatlah tanggal, halaman jurnal, dan jumlah kredit yang tertera ke kolom yang tepat untuk akun yang di-kredit.
-4. Pada kolom Ref. jurnal, tulislah nomor akun atas jumlah kredit yang diposting.
+## Posting
+Now let's illustrate the transfer (posting) from journal to ledger.
 
-Sekarang coba kita ilustrasikan pemindahbukuan (_posting_) dari jurnal ke buku besar.
-1. Tanggal 1 September: Pemegang saham menginvestasikan kas sebesar 100.000 dalam perusahaan celana kolor yang dikenal sebagai PT Color Ceria.
+```javascript
+1. September, 1: 
+   Shareholders invested 100,000 cash in the underpants company 
+   known as Color Ceria's Advertising.
+```
 
-Ayat Jurnal:
+**Ayat Jurnal:**
 
-<div style="width: 100%; overflow-x: scroll; margin-bottom: 1.75rem;">
-	<table style="width: 100%; overflow-x: scroll; box-sizing: border-box;">
-		<tbody>
-			<tr>
-				<td style="vertical-align: middle; background-color: var(--bg)">Sept. <span style="float: right;">1</span></td>
-				<td style="vertical-align: top;">Kas <br> &nbsp; Saham Biasa <br> &nbsp; (Menerbitkan saham)</td>
-				<td style="vertical-align: top;">101 <br>311</td>
-				<td style="vertical-align: top;">100.000 <br> &nbsp; </td>
-				<td style="vertical-align: top;">&nbsp; <br> 100.000 </td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+<app-table-5-id />
 
-Posting:
+**Posting:**
 
-<div class="table__ledger" style="width: 100%; overflow-x: scroll; display: grid; grid-template-columns: 1fr 1fr; grid-gap: 1rem; margin-bottom: 1.75rem; box-sizing: border-box;">
-	<table style="overflow-x: scroll; box-sizing: border-box; width: 100%;">
-		<tbody>
-			<tr>
-				<td colspan="2" style="text-align: center; background-color: var(--bg)"><b>Kas</b> <span style="float: right;">101</span></td>
-			</tr>
-			<tr width="600" style="display: grid; grid-template-columns: 1fr 1fr;">
-				<td>Sept. 1, <span style="float:right;">100.000</span></td>
-				<td>&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-	<table style="overflow-x: scroll; box-sizing: border-box; width: 100%;">
-		<tbody>
-			<tr>
-				<td colspan="2" style="text-align: center; background-color: var(--bg)"><b>Saham Biasa</b> <span style="float: right;">311</span></td>
-			</tr>
-			<tr width="600" style="display: grid; grid-template-columns: 1fr 1fr;">
-				<td>&nbsp;</td>
-				<td>Sept. 1, <span style="float:right;">100.000</span></td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+<app-table-6-id />
 
-2. Tanggal 1 September: PT Color Ceria memberi perlengkapan kantor senilai 50.000 dengan menandatangani wesel bayar 3 bulan, 12% senilai 50.000.
+```javascript
+2. September, 1: 
+   Color Ceria Advertising provided office supplies worth 50,000 
+   by signing a 3-month, 12% bills for 50,000.
+```
 
-Ayat Jurnal:
+**Ayat Jurnal:**
 
-<div style="width: 100%; overflow-x: scroll; margin-bottom: 1.75rem;">
-	<table style="width: 100%; overflow-x: scroll;">
-		<tbody>
-			<tr>
-				<td style="vertical-align: middle; background-color: var(--bg)">Sept. <span style="float: right;">1</span></td>
-				<td style="vertical-align: top;">Perlengkapan <br>&nbsp; Wesel bayar<br>&nbsp;(Perlengkapan kantor)</td>
-				<td style="vertical-align: top;">157<br>200</td>
-				<td style="vertical-align: top;">50.000<br>&nbsp;</td>
-				<td style="vertical-align: top;">&nbsp;<br>50.000</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+<app-table-7-id />
 
-Posting:
+**Posting:**
 
-<div class="table__ledger" style="width: 100%; overflow-x: scroll; display: grid; grid-template-columns: 1fr 1fr; grid-gap: 1rem; margin-bottom: 1.75rem;">
-	<table style="overflow-x: scroll;">
-		<tbody>
-			<tr>
-				<td colspan="2" style="text-align: center; background-color: var(--bg)"><b>Perlengkapan Kantor</b> <span style="float: right;">157</span></td>
-			</tr>
-			<tr width="600" style="display: grid; grid-template-columns: 1fr 1fr;">
-				<td>Sept. 1, <span style="float:right;">50.000</span></td>
-				<td>&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-	<table style="overflow-x: scroll;">
-		<tbody>
-			<tr>
-				<td colspan="2" style="text-align: center; background-color: var(--bg)"><b>Wesel Bayar</b> <span style="float: right;">200</span></td>
-			</tr>
-			<tr width="600" style="display: grid; grid-template-columns: 1fr 1fr;">
-				<td>&nbsp;</td>
-				<td>Sept. 1, <span style="float:right;">50.000</span></td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+<app-table-8-id />
 
-3. Tanggal 2 September: PT Color Advertising menerima uang muka sebesar 12.000 dari PT Lariso untuk jasa periklanan yang diharapkan akan selesai pada 31 Desember.
+```javascript
+3. September, 2: 
+   Color Ceria Advertising received a down payment of 12,000 from PT Lariso for 
+   advertising services which are expected to be completed on December 31st.
+```
 
-Ayat Jurnal:
+**Ayat Jurnal:**
 
-<div style="width: 100%; overflow-x: scroll; margin-bottom: 1.75rem;">
-	<table style="width: 100%; overflow-x: scroll;">
-		<tbody>
-			<tr>
-				<td style="vertical-align: middle; background-color: var(--bg)">Sept. <span style="float: right;">2</span></td>
-				<td style="vertical-align: top;">Kas<br>&nbsp;Pendapatan diterima di muka<br>&nbsp;(Menerima kas untuk jasa di masa depan)</td>
-				<td style="vertical-align: top;">101<br>209</td>
-				<td style="vertical-align: top;">12.000<br>&nbsp;</td>
-				<td style="vertical-align: top;">&nbsp;<br>12.000</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+<app-table-9-id />
 
-Posting:
+**Posting:**
 
-<div class="table__ledger" style="width: 100%; overflow-x: scroll; display: grid; grid-template-columns: 1fr 1fr; grid-gap: 1rem; margin-bottom: 1.75rem;">
-	<table style="overflow-x: scroll;">
-		<tbody>
-			<tr>
-				<td colspan="2" style="text-align: center; background-color: var(--bg)"><b>Kas</b> <span style="float: right;">101</span></td>
-			</tr>
-			<tr width="600" style="display: grid; grid-template-columns: 1fr 1fr;">
-				<td>Sept. 1, <span style="float:right;">100.000</span> <br>Sept. 2, <span style="float:right;">12.000</span></td>
-				<td>&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-	<table style="overflow-x: scroll;">
-		<tbody>
-			<tr>
-				<td colspan="2" style="text-align: center; background-color: var(--bg)"><b>Pendapatan diterima di muka</b> <span style="float: right;">209</span></td>
-			</tr>
-			<tr width="600" style="display: grid; grid-template-columns: 1fr 1fr;">
-				<td>&nbsp;</td>
-				<td>Sept. 1, <span style="float:right;">12.000</span></td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+<app-table-10-id />
 
-4. Tanggal 3 September: PT Color Advertising membayar sewa kantor secara tunai untuk bulan September sebesar 9.000.
+```javascript
+4. September, 3: 
+   Color Ceria Advertising paid the office rent in cash 
+   for September of 9,000.
+```
 
-Ayat Jurnal:
+**Ayat Jurnal:**
 
-<div style="width: 100%; overflow-x: scroll; margin-bottom: 1.75rem;">
-	<table style="width: 100%; overflow-x: scroll;">
-		<tbody>
-			<tr>
-				<td style="vertical-align: middle; background-color: var(--bg)">Sept. <span style="float: right;">3</span></td>
-				<td style="vertical-align: top;">Beban sewa <br>&nbsp; Kas <br>&nbsp; (Membayar sewa kantor)</td>
-				<td style="vertical-align: top;">729 <br>101</td>
-				<td style="vertical-align: top;">9.000 <br>&nbsp;</td>
-				<td style="vertical-align: top;">&nbsp; <br>9.000</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+<app-table-11-id />
 
-Posting:
+**Posting:**
 
-<div class="table__ledger" style="width: 100%; overflow-x: scroll; display: grid; grid-template-columns: 1fr 1fr; grid-gap: 1rem; margin-bottom: 1.75rem;">
-	<table style="overflow-x: scroll;">
-		<tbody>
-			<tr>
-				<td colspan="2" style="text-align: center; background-color: var(--bg)"><b>Kas</b> <span style="float: right;">101</span></td>
-			</tr>
-			<tr width="600" style="display: grid; grid-template-columns: 1fr 1fr;">
-				<td>Sept. 1, <span style="float:right;">100.000</span> <br>Sept. 2, <span style="float:right;">12.000</span></td>
-				<td>Sept. 3, <span style="float:right;">9.000</span></td>
-			</tr>
-		</tbody>
-	</table>
-	<table style="overflow-x: scroll;">
-		<tbody>
-			<tr>
-				<td colspan="2" style="text-align: center; background-color: var(--bg)"><b>Beban Sewa</b> <span style="float: right;">209</span></td>
-			</tr>
-			<tr width="600" style="display: grid; grid-template-columns: 1fr 1fr;">
-				<td>Sept. 3, <span style="float:right;">9.000</span></td>
-				<td>&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+<app-table-12-id />
 
-5. Tanggal 4 September: PT Color Advertising membayar polis asuransi sebesar 6.000 yang akan jatuh tempo pada 30 Agustus tahun depan.
+```javascript
+5. September, 4: 
+   Color Ceria Advertising pays an insurance policy of 6,000 
+   which will mature on August 30 next year.
+```
+**Ayat Jurnal:**
 
-Ayat Jurnal:
+<app-table-13-id />
 
-<div style="width: 100%; overflow-x: scroll; margin-bottom: 1.75rem;">
-	<table style="width: 100%; overflow-x: scroll;">
-		<tbody>
-			<tr>
-				<td style="vertical-align: middle; background-color: var(--bg)">Sept. <span style="float: right;">4</span></td>
-				<td style="vertical-align: top;">Asuransi dibayar di muka <br>&nbsp; Kas <br>&nbsp; (Membayar polis 1 tahun: aktif per 1 Sept.)</td>
-				<td style="vertical-align: top;">130 <br>101</td>
-				<td style="vertical-align: top;">6.000 <br>&nbsp;</td>
-				<td style="vertical-align: top;">&nbsp; <br>6.000</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+**Posting:**
 
-Posting:
+<app-table-14-id />
 
-<div class="table__ledger" style="width: 100%; overflow-x: scroll; display: grid; grid-template-columns: 1fr 1fr; grid-gap: 1rem; margin-bottom: 1.75rem;">
-	<table style="overflow-x: scroll;">
-		<tbody>
-			<tr>
-				<td colspan="2" style="text-align: center; background-color: var(--bg)"><b>Kas</b> <span style="float: right;">101</span></td>
-			</tr>
-			<tr width="600" style="display: grid; grid-template-columns: 1fr 1fr;">
-				<td>Sept. 1, <span style="float:right;">100.000</span> <br>Sept. 2, <span style="float:right;">12.000</span></td>
-				<td>Sept. 3, <span style="float:right;">9.000</span> <br>Sept, 4 <span style="float: right;">6.000</span></td>
-			</tr>
-		</tbody>
-	</table>
-	<table style="overflow-x: scroll;">
-		<tbody>
-			<tr>
-				<td colspan="2" style="text-align: center; background-color: var(--bg)"><b>Asuransi Dibayar di Muka</b> <span style="float: right;">130</span></td>
-			</tr>
-			<tr width="600" style="display: grid; grid-template-columns: 1fr 1fr;">
-				<td>Sept. 4, <span style="float:right;">6.000</span></td>
-				<td>&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+```javascript
+6. September, 5: 
+   Color Ceria Advertising buys creative equipment which is estimated 
+   to be valid for 3 months for 25,000 on credit.
+```
 
-6. Tanggal 5 September: PT Color Advertising membeli perlengkapan materi iklan yang diestimasi berlaku 3 bulan seharga 25.000 secara kredit.
+**Ayat Jurnal:**
 
-Ayat Jurnal:
+<app-table-15-id />
 
-<div style="width: 100%; overflow-x: scroll; margin-bottom: 1.75rem;">
-	<table style="width: 100%; overflow-x: scroll;">
-		<tbody>
-			<tr>
-				<td style="vertical-align: middle; background-color: var(--bg)">Sept. <span style="float: right;">5</span></td>
-				<td style="vertical-align: top;">Perlengkapan iklan <br>&nbsp; Utang usaha <br>&nbsp; (Membeli perlengkapan iklan secara kredit)</td>
-				<td style="vertical-align: top;">126 <br>201</td>
-				<td style="vertical-align: top;">25.000 <br>&nbsp;</td>
-				<td style="vertical-align: top;">&nbsp; <br>25.000</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+**Posting:**
 
-Posting:
+<app-table-16-id />
 
-<div class="table__ledger" style="width: 100%; overflow-x: scroll; display: grid; grid-template-columns: 1fr 1fr; grid-gap: 1rem; margin-bottom: 1.75rem;">
-	<table style="overflow-x: scroll;">
-		<tbody>
-			<tr>
-				<td colspan="2" style="text-align: center; background-color: var(--bg)"><b>Perlengkapan Iklan</b> <span style="float: right;">126</span></td>
-			</tr>
-			<tr width="600" style="display: grid; grid-template-columns: 1fr 1fr;">
-				<td>Sept. 5, <span style="float:right;">25.000</span></td>
-				<td>&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-	<table style="overflow-x: scroll;">
-		<tbody>
-			<tr>
-				<td colspan="2" style="text-align: center; background-color: var(--bg)"><b>Utang Usaha</b> <span style="float: right;">201</span></td>
-			</tr>
-			<tr width="600" style="display: grid; grid-template-columns: 1fr 1fr;">
-				<td>&nbsp;</td>
-				<td>Sept. 5, <span style="float:right;">25.000</span></td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+```javascript
+7. September, 20: 
+   Color Ceria Advertising announced and paid a cash dividend 
+   of 5,000 to shareholders.
+```
 
-7. Tanggal 20 September: PT Color Advertising mengumumkan dan membayar dividen tunai sebesar 5.000 kepada pemegang saham.
+**Ayat Jurnal:**
 
-Ayat Jurnal:
+<app-table-17-id />
 
-<div style="width: 100%; overflow-x: scroll; margin-bottom: 1.75rem;">
-	<table style="width: 100%; overflow-x: scroll;">
-		<tbody>
-			<tr>
-				<td style="vertical-align: middle; background-color: var(--bg)">Sept. <span style="float: right;">20</span></td>
-				<td style="vertical-align: top;">Dividen <br>&nbsp; Kas <br>&nbsp; (Mengumumkan dan membayar dividen tunai)</td>
-				<td style="vertical-align: top;">332 <br>101</td>
-				<td style="vertical-align: top;">5.000 <br>&nbsp;</td>
-				<td style="vertical-align: top;">&nbsp; <br>5.000</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+**Posting:**
 
-Posting:
+<app-table-18-id />
 
-<div class="table__ledger" style="width: 100%; overflow-x: scroll; display: grid; grid-template-columns: 1fr 1fr; grid-gap: 1rem; margin-bottom: 1.75rem;">
-	<table style="overflow-x: scroll;">
-		<tbody>
-			<tr>
-				<td colspan="2" style="text-align: center; background-color: var(--bg)"><b>Kas</b> <span style="float: right;">101</span></td>
-			</tr>
-			<tr width="600" style="display: grid; grid-template-columns: 1fr 1fr;">
-				<td>Sept. 1, <span style="float:right;">100.000</span> <br>Sept. 2, <span style="float:right;">12.000</span> <br><span>&nbsp;</span></td>
-				<td>Sept. 3, <span style="float:right;">9.000</span> <br>Sept. 4, <span style="float: right;">6.000</span> <br>Sept. 20, <span style="float: right;">5.000</span></td>
-			</tr>
-		</tbody>
-	</table>
-	<table style="overflow-x: scroll;">
-		<tbody>
-			<tr>
-				<td colspan="2" style="text-align: center; background-color: var(--bg)"><b>Dividen</b> <span style="float: right;">332</span></td>
-			</tr>
-			<tr width="600" style="display: grid; grid-template-columns: 1fr 1fr;">
-				<td>Sept. 20, <span style="float:right;">5.000</span></td>
-				<td>&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+```javascript
+8. September, 26: 
+   Color Ceria Advertising pays an employee salary of 40,000 
+   for the employee's work for a month.
+```
 
-8. Tanggal 26 September: PT Coloria Advertising membayar gaji karyawan sebesar 40.000 atas kerja karyawan selama sebulan.
+**Ayat Jurnal:**
 
-Ayat Jurnal:
+<app-table-19-id />
 
-<div style="width: 100%; overflow-x: scroll; margin-bottom: 1.75rem;">
-	<table style="width: 100%; overflow-x: scroll;">
-		<tbody>
-			<tr>
-				<td style="vertical-align: middle; background-color: var(--bg)">Sept. <span style="float: right;">26</span></td>
-				<td style="vertical-align: top;">Beban gaji <br>&nbsp; Kas <br>&nbsp; (Membayar gaji karyawan)</td>
-				<td style="vertical-align: top;">726 <br>101</td>
-				<td style="vertical-align: top;">40.000 <br>&nbsp;</td>
-				<td style="vertical-align: top;">&nbsp; <br>40.000</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+**Posting:**
 
-Posting:
+<app-table-20-id />
 
-<div class="table__ledger" style="width: 100%; overflow-x: scroll; display: grid; grid-template-columns: 1fr 1fr; grid-gap: 1rem; margin-bottom: 1.75rem;">
-	<table style="overflow-x: scroll;">
-		<tbody>
-			<tr>
-				<td colspan="2" style="text-align: center; background-color: var(--bg)"><b>Kas</b> <span style="float: right;">101</span></td>
-			</tr>
-			<tr width="600" style="display: grid; grid-template-columns: 1fr 1fr;">
-				<td>Sept. 1, <span style="float:right;">100.000</span> <br>Sept. 2, <span style="float:right;">12.000</span> <br><span>&nbsp;</span> <br>&nbsp;</td>
-				<td>Sept. 3, <span style="float:right;">9.000</span> <br>Sept. 4, <span style="float: right;">6.000</span> <br>Sept. 20, <span style="float: right;">5.000</span> <br>Sept. 26, <span style="float:right;">40.000</span></td>
-			</tr>
-		</tbody>
-	</table>
-	<table style="overflow-x: scroll;">
-		<tbody>
-			<tr>
-				<td colspan="2" style="text-align: center; background-color: var(--bg)"><b>Beban Gaji</b> <span style="float: right;">726</span></td>
-			</tr>
-			<tr width="600" style="display: grid; grid-template-columns: 1fr 1fr;">
-				<td>Sept. 26, <span style="float:right;">40.000</span></td>
-				<td>&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+```javascript
+9. September, 30: 
+   Color Ceria Advertising received cash of 28,000 and charged 
+   Sadean's Company 72,000 for advertising services worth 100,000.
+```
 
-9. Tanggal 30 September: PT Color Advertising menerima kas sebesar 28.000 dan menagih PT Sadean sebesar 72.000 atas jasa periklanan senilai 100.000.
+**Ayat Jurnal:**
 
-Ayat Jurnal:
+<app-table-21-id />
 
-<div style="width: 100%; overflow-x: scroll; margin-bottom: 1.75rem;">
-	<table style="width: 100%; overflow-x: scroll;">
-		<tbody>
-			<tr>
-				<td style="vertical-align: middle; background-color: var(--bg)">Sept. <span style="float: right;">30</span></td>
-				<td style="vertical-align: top;">Kas <br> Piutang usaha <br> &nbsp; Pendapatan jasa <br> &nbsp; (Mengakui pendapatan atas jasa)</td>
-				<td style="vertical-align: top;">101 <br>112 <br>400</td>
-				<td style="vertical-align: top;">28.000 <br> 72.000 <br>&nbsp;</td>
-				<td style="vertical-align: top;">&nbsp; <br> &nbsp; <br> 100.000 </td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+**Posting:**
 
-Posting:
-
-<div class="table__ledger" style="width: 100%; overflow-x: scroll; display: grid; grid-template-columns: 1fr 1fr; grid-gap: 1rem; margin-bottom: 1.75rem;">
-	<table style="overflow-x: scroll;">
-		<tbody>
-			<tr>
-				<td colspan="2" style="text-align: center; background-color: var(--bg)"><b>Kas</b> <span style="float: right;">101</span></td>
-			</tr>
-			<tr width="600" style="display: grid; grid-template-columns: 1fr 1fr;">
-				<td>Sept. 1, <span style="float:right;">100.000</span> <br>Sept. 2, <span style="float:right;">12.000</span> <br>Sept. 30, <span style="float: right;">28.000</span></td>
-				<td>Sept. 3, <span style="float:right;">9.000</span> <br>Sept. 4, <span style="float: right;">6.000</span> <br>Sept. 20, <span style="float: right;">5.000</span> <br>Sept. 26, <span style="float:right;">40.000</span> <br>&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-	<table style="overflow-x: scroll;">
-		<tbody>
-			<tr>
-				<td colspan="2" style="text-align: center; background-color: var(--bg)"><b>Piutang Usaha</b> <span style="float: right;">112</span></td>
-			</tr>
-			<tr width="600" style="display: grid; grid-template-columns: 1fr 1fr;">
-				<td>Sept. 30, <span style="float:right;">72.000</span></td>
-				<td>&nbsp;</td>
-			</tr>
-		</tbody>
-	</table>
-	<table style="overflow-x: scroll;">
-		<tbody>
-			<tr>
-				<td colspan="2" style="text-align: center; background-color: var(--bg)"><b>Pendapatan Jasa</b> <span style="float: right;">400</span></td>
-			</tr>
-			<tr width="600" style="display: grid; grid-template-columns: 1fr 1fr;">
-				<td>&nbsp;</td>
-				<td>Sept. 30, <span style="float:right;">100.000</span></td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+<app-table-22-id />

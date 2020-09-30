@@ -105,7 +105,7 @@ article {
 		}
 	}
 
-	> .img {
+	.img {
 		img {
 			background-size: cover;
 			background-position: 50% 50%;

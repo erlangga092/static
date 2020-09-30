@@ -21,6 +21,15 @@
 					<td>500.000</td>
 					<td>&nbsp; <br>500.000</td>
 				</tr>
+				<tr>
+					<td style="vertical-align: middle;"><span style="float: right;">1</span></td>
+					<td class="table__jurnal__umum__akun" colspan="3">
+						Peralatan kantor <br> &nbsp; Kas <br> &nbsp; (Membeli peralatan kantor)
+					</td>
+					<td></td>
+					<td>100.000</td>
+					<td>&nbsp; <br> 100.000 </td>
+				</tr>
 			</tbody>
 		</table>
 	</div>

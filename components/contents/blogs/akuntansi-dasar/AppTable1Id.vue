@@ -1,7 +1,7 @@
 <template>
-	<div class="table__account" style="width: 100%; box-sizing: border-box; overflow-x: scroll;">
-		<div class="table-1" style="width: 100%; box-sizing: border-box; overflow-x: scroll;">
-			<table style="table-layout: fixed;">
+	<div class="table__account">
+		<div class="table__account__1">
+			<table>
 				<thead>
 					<tr>
 						<th colspan="2" style="background-color: var(--bg)">Saldo Normal - Debet <br>Akun Aktiva</th>
@@ -26,7 +26,7 @@
 				</tbody>
 			</table>
 		</div>
-		<div class="table-2" style="width: 100%; box-sizing: border-box; overflow-x: scroll;">
+		<div class="table__account__2">
 			<table>
 				<thead>
 					<tr>
@@ -76,20 +76,26 @@ export default {
 
 <style lang="postcss">
 .table__account {
+	width: 100%;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
 	grid-gap: 2rem;
+	overflow-x: auto;
+	box-sizing: border-box;
+	grid-template-columns: 1fr 1fr;
 	@media screen and (max-width: 978px) {
-		grid-template-columns: 1fr;
 		grid-gap: 2rem;
+		grid-template-columns: 1fr;
 	}
-	.table-1,
-	.table-2 {
+
+	&__1,
+	&__2 {
 		width: 100%;
 		display: flex;
+		box-sizing: border-box;
 		justify-content: center;
 		table {
 			width: 100%;
+			table-layout: fixed;
 		}
 	}
 }
