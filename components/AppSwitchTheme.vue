@@ -46,23 +46,23 @@
 </template>
 
 <script>
-const Cookie = process.client ? require('js-cookie') : undefined
+const Cookie = process.client ? require("js-cookie") : undefined;
 
 export default {
-	props: {
-		value: {
-			type: Boolean,
-			default: false
-		}
-	},
-	watch: {
-		value(value) {
-			Cookie.set('d', Number(this.value), {
-				expires: 365
-			})
-		}
-	}
-}
+  props: {
+    value: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  watch: {
+    value(value) {
+      Cookie.set("d", Number(this.value), {
+        expires: 365,
+      });
+    },
+  },
+};
 </script>
 
 <style lang="postcss">

@@ -13,8 +13,8 @@
   right: 1.9rem;
 
   @media screen and (max-width: 576px) {
-  	bottom: 1rem;
-  	right: 1.5rem;
+    bottom: 1rem;
+    right: 1.5rem;
   }
 
   &__link {

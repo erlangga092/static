@@ -1,11 +1,11 @@
 <script>
-import { DEFAULT_PATH } from './constant';
+import { DEFAULT_PATH } from "./constant";
 
 export default {
-	data() {
-		return {
-			DEFAULT_PATH
-		}
-	}
-}
+  data() {
+    return {
+      DEFAULT_PATH,
+    };
+  },
+};
 </script>

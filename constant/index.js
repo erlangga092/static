@@ -1,1 +1,1 @@
-export const HOSTNAME = 'https://erlangga.now.sh'
+export const HOSTNAME = "https://erlangga.now.sh";
